@@ -314,7 +314,7 @@ set sb
 set spr
 
 " [global] |'spellsuggest'| Method(s) used to suggest spelling corrections
-"set sps=best,10
+set sps=best,10
 
 " [global] |'statusline'] Custom format for the status line
 set stl=%<[%n]\ %F\ \ Filetype=\%Y\ \ %r\ %1*%m%*%w%=%(Line:\ %l%)%4(%)Column:\ %5(%c%V/%{strlen(getline(line('.')))}%)\ %4(%)%p%%
