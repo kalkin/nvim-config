@@ -1,3 +1,27 @@
 [submodule "vim-pathogen"]
 	path = vim-pathogen
 	url = http://github.com/paulnicholson/vim-pathogen.git
+[submodule "bundle/checksyntax_vim"]
+	path = bundle/checksyntax_vim
+	url = git://github.com/tomtom/checksyntax_vim.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "snippets"]
+	path = snippets
+	url = git://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/pdocs"]
+	path = bundle/pdocs
+	url = git://github.com/vim-scripts/PHPDoc-Script-PDocS.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = http://github.com/bronson/vim-taglist.git
