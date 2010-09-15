@@ -8,7 +8,7 @@ My Vim Configuration
 
 Information 
 -----------
-My vim configuration uses pathogen and git submodules to propperly handle the
+My vim configuration uses pathogen and git submodules to properly handle the
 plugin chaos. This configuration was first based on Christian `strcat`
 Schneiders vim configuration http://github.com/strcat/dotfiles
 
@@ -61,7 +61,8 @@ Vim Version Used
   |      user vimrc file: "$HOME/.vimrc"
   |       user exrc file: "$HOME/.exrc"
   |   fall-back for $VIM: "/usr/share/vim"
-  | Compilation: x86_64-pc-linux-gnu-gcc -c -I. -Iproto -DHAVE_CONFIG_H     -march=nocona -O2 -pipe -D_FORTIFY_SOURCE=1
+  | Compilation: x86_64-pc-linux-gnu-gcc -c -I. -Iproto -DHAVE_CONFIG_H
+  | -march=nocona -O2 -pipe -D_FORTIFY_SOURCE=1
   | Linking: x86_64-pc-linux-gnu-gcc   -rdynamic  -Wl,-O1 -Wl,--as-needed
   | -L/usr/local/lib -o vim    -lXt -lcurses -lacl -lgpm -rdynamic
   | -L/usr/local/lib64
@@ -89,6 +90,23 @@ The file vimrc just embeds the other vim configuration files like vimsettings
 and vimbindings. All plugins are installed into bundle/ directory, from where
 they are loaded by pathogen.
 
+Files Structure
+~~~~~~~~~~~~~~~
+Lines starting with an inverted comma (") are comments. Furthermore, 's within
+the line starts a comment unless it is preceeded by a backslash (\").  VIM
+allows to give special characters by writing them in a special notation.  The
+notation encloses descriptive words in angle brackets (<>).
+Read all about it with ":help <>".
+
+The characters you will most often are
+
+- <C-M> for control-m
+- <C-V> for control-v which quotes the following character
+- <ESC> for the escape character.
+- <Fn>  for F1, F2, ..
+- <C-n> for control-n (i. e. strg-a, strg-k, ..)
+
+
 
 Installation
 ------------
@@ -115,6 +133,7 @@ Learn VIM
 Vim Internal Documentation 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Try the documentation :help your_keyword:
+ 
  WHAT                   PREPEND    EXAMPLE
  Normal mode commands  (nothing)   :help x
  Visual mode commands      v_      :help v_u
