@@ -1,0 +1,45 @@
+" Contains vim bindings
+" vim:foldmarker={{{,}}} tw=80 ft=vim
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+map Qw :bd<CR>
+map QQ :qall!<CR>
+
+:imap <C-C> <C-HOME>
+:imap <C-V> <C-END>
+imap <F1> <Esc><F1>i
+imap <F2> <Esc><F2>i
+imap <F3> <Esc><F3>i
+imap <F4> <Esc><F4>i
+imap <F5> <Esc><F5>i
+imap <F6> <Esc><F6>i
+imap <F7> <Esc><F7>i
+
+
+" Tabs
+noremap <F1>  :tabprevious<CR>
+noremap <F2>  :tabnext<CR>
+
+" toggle highlight search (folke)
+noremap <F3>  :if 1 == &hls \| noh \| else \| set hls \| endif \| <CR>
+
+" paste mode
+noremap <F4> :set invpaste<CR><Bar>:echo "Paste Mode: " . strpart("OffOn", 3 * &paste, 3)<CR>
+noremap <F5> :if &foldmarker == '{,}' \| set foldmarker={{{,}}} \| elseif &foldmarker== '{{{,}}}' \| set foldmarker={,} \| endif <CR>
+
+:map <F6> :w!<CR>:!aspell --lang=de check %<CR>:e! %<CR>
+:map <F7> :w!<CR>:!aspell --lang=en check %<CR>:e! %<CR>
+:map <F8> :TrinityToggleAll<CR>
+:map <F9> :if &foldclose == 'all' \| set foldclose= \| elseif &foldclose == ''
+\\| set foldclose=\all \| endif<CR> :set foldclose<CR>
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Call sudo
+cmap w!! w !sudo tee % >/dev/null
