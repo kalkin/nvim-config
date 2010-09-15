@@ -1,6 +1,24 @@
-" Contains vim bindings
+" Information
+" {{{
 " vim:foldmarker={{{,}}} tw=80 ft=vim
-" Quickly edit/reload the vimrc file
+" Last Modified [ 2010-09-15 ]
+" 
+" This file defines mappings ("map")
+"
+" Here is an overview of map commands and in which mode they work:
+"   ,----
+"   | :map               Normal, Visual and Operator-pending
+"   | :vmap              Visual
+"   | :nmap              Normal
+"   | :omap              Operator-pending
+"   | :map!              Insert and Command-line
+"   | :imap              Insert
+"   | :cmap              Command-line
+"   `----
+
+"}}}
+
+" Quickly edit/reload the vimrc 
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
