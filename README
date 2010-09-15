@@ -9,7 +9,7 @@ My Vim Configuration
 Information 
 -----------
 My vim configuration uses pathogen and git submodules to propperly handle the
-plugin chaos. This Configuration was first based on Christian `strcat`
+plugin chaos. This configuration was first based on Christian `strcat`
 Schneiders vim configuration http://github.com/strcat/dotfiles
 
 
