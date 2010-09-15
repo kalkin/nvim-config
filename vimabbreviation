@@ -1,0 +1,11 @@
+" Information 
+" {{{
+" vim:foldmarker={{{,}}} tw=80 ft=vim
+" Last Modified [ 2010-09-15 ]
+" 
+" This file contains my abbreviations
+"
+" }}}
+
+iab TDY <C-R>=strftime("%Y-%m-%d")<CR>
+ab NRM :Author:    Kalkin Sam<CR>:Email:     mail@kalkin.de<CR>:Date:      <C-R>=strftime("%Y-%m-%d")<CR>

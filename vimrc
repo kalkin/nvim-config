@@ -6,3 +6,7 @@
 "                 *after* they are typed in.
 source ~/.vim/vimsettings
 source ~/.vim/vimbindings
+source ~/.vim/vimabbreviation
+source ~/.vim/vimmisc
+
+
