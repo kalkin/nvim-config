@@ -305,7 +305,10 @@ set sta
 set sts=4
 
 " [window] |'spell'| Enable spell checking
-set spell
+" set spell
+
+" [buffer] |'spelllang| Language(s) to do spell checking for
+set spelllang =en,de_20
 
 " [global] |'splitbelow'| New window from split is below the current one
 set sb
