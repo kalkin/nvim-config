@@ -1,12 +1,15 @@
-"       There are three kinds of things which are defined in this file:
-"       Mappings ("map"), settings ("set"), and abbreviations ("ab").
-"               - Settings affect the behaviour of commands.
-"               - Mappings maps a key sequence to a command.
-"               - Abbreviations define words which are replaced right 
-"                 *after* they are typed in.
+" Information 
+" {{{
+" vim:foldmarker={{{,}}} tw=80 ft=vim
+" Last Modified [ 2010-09-16 ]
+"
+" This file just sources my configuration files. 
+"
+" }}}
 source ~/.vim/vimsettings
-source ~/.vim/vimbindings
-source ~/.vim/vimabbreviation
 source ~/.vim/vimmisc
-
+source ~/.vim/vimautocmd
+source ~/.vim/vimfunctions
+source ~/.vim/vimabbreviation
+source ~/.vim/vimbindings
 
