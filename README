@@ -3,7 +3,7 @@ My Vim Configuration
 :Author:    Kalkin Sam
 :Email:     mail@kalkin.de
 :Date:      2010-09-15
-:Revdate:   2010-09-15 
+:Revdate:   2010-09-16
 
 
 Information 
@@ -129,6 +129,8 @@ Installation
 Learn VIM
 ---------
 - run \"vimtutor" from your Unix/Linux-prompt and go through it
+- If you need help understanding some setting in my config files press K over a
+  word and help will open and explain it
 
 Vim Internal Documentation 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
