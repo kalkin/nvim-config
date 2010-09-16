@@ -1,9 +1,11 @@
 " Information 
 " {{{
 " vim:foldmarker={{{,}}} tw=80 ft=vim
-" Last Modified [ 2010-09-15 ]
+" Last Modified [ 2010-09-16 ]
 " 
 " This file contains my abbreviations
+"  Abbreviations define words which are replaced right *after* they are typed
+"  in.
 "
 " }}}
 
