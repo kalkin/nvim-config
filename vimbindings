@@ -48,13 +48,14 @@ noremap <F3>  :if 1 == &hls \| noh \| else \| set hls \| endif \| <CR>
 noremap <F4> :set invpaste<CR><Bar>:echo "Paste Mode: " . strpart("OffOn", 3 * &paste, 3)<CR>
 
 " Switch between foldmarkers
-:map <F5> :if &foldmarker == '{,}' \| set foldmarker={{{,}}} \| elseif &foldmarker== '{{{,}}}' \| set foldmarker={,} \| endif <CR>
+:map <F5> :if &foldmarker == '{,}' \| set foldmarker={{{,}}} 
+            \\| elseif &foldmarker== '{{{,}}}' \| set foldmarker={,} \| endif <CR>
 
 " Toggle relative numbers on and off
 :map <F6>  :if 1 == &rnu \|set nornu \| set nu \| else \| set rnu  \| endif \| <CR>
 
 " Toglle spellchecking between en_us and de_20 (new spelling
-:map <F7> :if &spelllang != 'en' \| set spelllang=en \| else \| set spelllang=de_20 \| endif \| <CR>
+:map<F7> :if 1 == &spell \| set nospell \| else \| set spell \| endif \| <CR>
 
 :map <F8> :TrinityToggleAll<CR>
 :map <F9> :if &foldclose == 'all' \| set foldclose= \| elseif &foldclose == ''
