@@ -26,6 +26,9 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 map Qw :bd<CR>
 map QQ :qall!<CR>
 
+" Unmap Ex-Mode
+:map Q <Nop>
+
 :imap <C-C> <C-HOME>
 :imap <C-V> <C-END>
 imap <F1> <Esc><F1>i
