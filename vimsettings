@@ -26,6 +26,10 @@
 " [glo-lo] |'autoread'| autom. reread file when changed outside of Vim
 set ar
 
+" [buffer] |'autoindent'| Take indent for new line from previous line
+set ai
+
+
 " }}}
 
 " Options initiating with [B]
