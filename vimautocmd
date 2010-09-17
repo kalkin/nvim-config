@@ -20,7 +20,6 @@ autocmd BufNewFile,BufRead *.p6 setf perl6
 " Set dictionary to syntax file
 autocmd FileType * exec('set  dict+='.$VIMRUNTIME.'/syntax/'.getbufvar("%","current_syntax").'.vim')
 
-" Set keywordprg to help.
-" This allows you to press K on every word in the vimsettings and view the help
-" for it
+" Set keywordprg to help.  This allows you to press K on every word in the
+" vimsettings and view the help for it
 autocmd FileType vimrc setlocal keywordprg=:help
