@@ -28,3 +28,6 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "lib/sparkup"]
+	path = lib/sparkup
+	url = git://github.com/rstacruz/sparkup.git
