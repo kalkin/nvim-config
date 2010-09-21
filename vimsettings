@@ -26,10 +26,6 @@
 " [glo-lo] |'autoread'| autom. reread file when changed outside of Vim
 set ar
 
-" [buffer] |'autoindent'| Take indent for new line from previous line
-set ai
-
-
 " }}}
 
 " Options initiating with [B]
@@ -61,7 +57,7 @@ set bh=delete
 
 
 " [buffer] |'cindent'|  do C program indenting
-" set cin 
+set cin 
 
 " [global] |'cmdheight'| Disable the 'Press RETURN...' - Messages
 set ch=2
