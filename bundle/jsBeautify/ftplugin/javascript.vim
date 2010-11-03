@@ -1,1 +1,1 @@
-map = :call g:Jsbeautify() <CR>
+map <buffer> = :call g:Jsbeautify() <CR>
