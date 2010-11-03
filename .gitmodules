@@ -31,3 +31,6 @@
 [submodule "lib/sparkup"]
 	path = lib/sparkup
 	url = git://github.com/rstacruz/sparkup.git
+[submodule "bundle/histwin"]
+	path = bundle/histwin
+	url = git://github.com/chrisbra/histwin.vim.git
