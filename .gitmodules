@@ -31,3 +31,6 @@
 [submodule "bundle/histwin"]
 	path = bundle/histwin
 	url = git://github.com/chrisbra/histwin.vim.git
+[submodule "snippets"]
+	path = snippets
+	url = git@github.com:kalkin/snipmate-snippets.git
