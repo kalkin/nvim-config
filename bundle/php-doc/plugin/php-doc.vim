@@ -78,7 +78,7 @@ let g:pdv_cfg_CommentSingle = "//"
 let g:pdv_cfg_Type = "mixed"
 let g:pdv_cfg_Package = ""
 let g:pdv_cfg_Version = "$id$"
-let g:pdv_cfg_Author = "Bahtiar `kalkin-` Gadimov <bahtiar@gadimov.de>>"
+let g:pdv_cfg_Author = "Bahtiar `kalkin-` Gadimov <bahtiar@gadimov.de>"
 let g:pdv_cfg_Copyright = "Bahtiar Gadimov"
 "let g:pdv_cfg_License = "PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}"
 
