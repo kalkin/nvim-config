@@ -27,4 +27,4 @@ endif
 let mapleader=","
 
 " Needed for loading own snippets and not the snipmate snippets
-let g:snippets_dir="~/.vim/.snippets"
+let g:snippets_dir="~/.vim/snippets"
