@@ -85,3 +85,12 @@ map <C-l> <C-w>l
 
 " Call sudo
 cmap w!! w !sudo tee % >/dev/null
+
+" Camelcase bindings
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+"sunmap e  
+
