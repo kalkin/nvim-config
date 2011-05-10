@@ -34,3 +34,9 @@
 [submodule "snippets"]
 	path = snippets
 	url = git@github.com:kalkin/snipmate-snippets.git
+[submodule "bundle/lusty"]
+	path = bundle/lusty
+	url = git://github.com/sjbach/lusty.git
+[submodule "bundle/piv"]
+	path = bundle/piv
+	url = https://github.com/spf13/PIV.git
