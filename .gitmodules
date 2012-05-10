@@ -13,12 +13,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "bundle/pdocs"]
-	path = bundle/pdocs
-	url = git://github.com/vim-scripts/PHPDoc-Script-PDocS.git
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = http://github.com/bronson/vim-taglist.git
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
@@ -31,12 +25,9 @@
 [submodule "bundle/lusty"]
 	path = bundle/lusty
 	url = git://github.com/sjbach/lusty.git
-[submodule "bundle/piv"]
-	path = bundle/piv
-	url = https://github.com/spf13/PIV.git
-[submodule "bundle/tlib"]
-	path = bundle/tlib
-	url = http://github.com/tomtom/tlib_vim
 [submodule "bundle/quickfix"]
 	path = bundle/quickfix
 	url = https://github.com/tomtom/quickfixsigns_vim.git
+[submodule "snippets"]
+	path = snippets
+	url = https://github.com/honza/snipmate-snippets.git
