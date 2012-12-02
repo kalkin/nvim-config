@@ -22,6 +22,3 @@
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/honza/snipmate-snippets.git
-[submodule "bundle/tlib"]
-	path = bundle/tlib
-	url = https://github.com/tomtom/tlib_vim.git
