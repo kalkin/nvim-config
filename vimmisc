@@ -20,9 +20,7 @@ filetype plugin on
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-if &t_Co >= 256
-    colorscheme mustang
-endif
+colorscheme solarized
 
 let mapleader=","
 
