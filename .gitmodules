@@ -22,3 +22,9 @@
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/honza/snipmate-snippets.git
+[submodule "bundle/IndentAnything"]
+	path = bundle/IndentAnything
+	url = git://github.com/vim-scripts/IndentAnything.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
