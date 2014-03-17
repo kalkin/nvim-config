@@ -7,9 +7,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
@@ -19,9 +16,6 @@
 [submodule "bundle/histwin"]
 	path = bundle/histwin
 	url = git://github.com/chrisbra/histwin.vim.git
-[submodule "snippets"]
-	path = snippets
-	url = https://github.com/honza/snipmate-snippets.git
 [submodule "bundle/IndentAnything"]
 	path = bundle/IndentAnything
 	url = git://github.com/vim-scripts/IndentAnything.git
