@@ -7,18 +7,15 @@
 "
 " }}}
 
+" Use pathogen to easily modify the runtime path to include all
+" plugins under the ~/.vim/bundle directory
+execute pathogen#infect()
 
 " Syntax on!
 syntax on
 
 " Filetype plugin on!
 filetype plugin on
-
-
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
 colorscheme solarized
 
