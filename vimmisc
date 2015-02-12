@@ -24,6 +24,13 @@ let mapleader=","
 " Needed for loading own snippets and not the snipmate snippets
 let g:snippets_dir="~/.vim/snippets"
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+
 " Default: 0
 " If enabled, syntastic will do syntax checks when buffers are first loaded as
 " well as on saving >
