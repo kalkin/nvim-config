@@ -34,7 +34,7 @@ let g:syntastic_auto_loc_list = 1
 " Default: 0
 " If enabled, syntastic will do syntax checks when buffers are first loaded as
 " well as on saving >
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=0
 
 let g:syntastic_enable_signs=1
 

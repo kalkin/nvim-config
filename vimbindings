@@ -52,9 +52,8 @@ imap <F11> <Esc><F11>i
 imap <F12> <Esc><F12>i
 
 
-" Tabs
-noremap <F1>  :tabprevious<CR>
-noremap <F2>  :tabnext<CR>
+noremap <S-F12> :lclose<Enter>:lclose<Enter>
+noremap <F12>  :lopen<Enter>
 
 noremap <F2>  :Isort <CR> :YapfFullFormat<CR>
 vmap <F2>  :YapfFormat<CR>
@@ -93,3 +92,6 @@ map <silent> e <Plug>CamelCaseMotion_e
 sunmap w
 sunmap b
 "sunmap e  
+"
+nnoremap ]e :lnext<CR>
+nnoremap [e :lprev<CR>
