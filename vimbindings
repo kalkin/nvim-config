@@ -73,9 +73,7 @@ noremap <F4> :set invpaste<CR><Bar>:echo "Paste Mode: " . strpart("OffOn", 3 * &
 " Toglle spellchecking between en_us and de_20 (new spelling
 :map<F7> :if 1 == &spell \| set nospell \| else \| set spell \| endif \| <CR>
 
-:map <F8> :TrinityToggleAll<CR>
 :map <F9> :UB<CR>
-:map <F10> :call PhpDoc()<CR>
 
 " Easy window navigation
 map <C-h> <C-w>h
