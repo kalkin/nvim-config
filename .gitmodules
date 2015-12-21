@@ -43,3 +43,6 @@
 [submodule "bundle/vim-isort"]
 	path = bundle/vim-isort
 	url = https://github.com/fisadev/vim-isort.git
+[submodule "bundle/vim-yapf-format"]
+	path = bundle/vim-yapf-format
+	url = https://github.com/pignacio/vim-yapf-format
