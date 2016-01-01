@@ -21,13 +21,13 @@
 	url = git://github.com/tpope/vim-rails.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+	url = git://github.com/scrooloose/syntastic.git
 [submodule "bundle/vim-coffe-script"]
 	path = bundle/vim-coffe-script
-	url = https://github.com/kchmck/vim-coffee-script.git
+	url = git://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
+	url = git://github.com/plasticboy/vim-markdown.git
 [submodule "bundle/vim-livedown"]
 	path = bundle/vim-livedown
 	url = git://github.com/shime/vim-livedown.git
