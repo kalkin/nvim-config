@@ -31,3 +31,6 @@
 [submodule "bundle/vim-livedown"]
 	path = bundle/vim-livedown
 	url = git://github.com/shime/vim-livedown.git
+[submodule "bundle/vim-bazel"]
+	path = bundle/vim-bazel
+	url = git://github.com/davidzchen/vim-bazel.git
