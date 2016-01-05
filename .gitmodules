@@ -1,36 +1,36 @@
 [submodule "vim-pathogen"]
 	path = vim-pathogen
-	url = http://github.com/tpope/vim-pathogen.git
+	url = https://github.com/tpope/vim-pathogen.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
-	url = git://github.com/Raimondi/delimitMate.git
+	url = https://github.com/Raimondi/delimitMate.git
 [submodule "lib/sparkup"]
 	path = lib/sparkup
-	url = git://github.com/rstacruz/sparkup.git
+	url = https://github.com/rstacruz/sparkup.git
 [submodule "bundle/histwin"]
 	path = bundle/histwin
-	url = git://github.com/chrisbra/histwin.vim.git
+	url = https://github.com/chrisbra/histwin.vim.git
 [submodule "bundle/IndentAnything"]
 	path = bundle/IndentAnything
-	url = git://github.com/vim-scripts/IndentAnything.git
+	url = https://github.com/vim-scripts/IndentAnything.git
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
+	url = https://github.com/tpope/vim-rails.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/vim-coffe-script"]
 	path = bundle/vim-coffe-script
-	url = git://github.com/kchmck/vim-coffee-script.git
+	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
-	url = git://github.com/plasticboy/vim-markdown.git
+	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "bundle/vim-livedown"]
 	path = bundle/vim-livedown
-	url = git://github.com/shime/vim-livedown.git
+	url = https://github.com/shime/vim-livedown.git
 [submodule "bundle/vim-bazel"]
 	path = bundle/vim-bazel
-	url = git://github.com/davidzchen/vim-bazel.git
+	url = https://github.com/davidzchen/vim-bazel.git
