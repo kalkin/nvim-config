@@ -34,3 +34,6 @@
 [submodule "bundle/vim-bazel"]
 	path = bundle/vim-bazel
 	url = https://github.com/davidzchen/vim-bazel.git
+[submodule "bundle/vim-perl"]
+	path = bundle/vim-perl
+	url = https://github.com/vim-perl/vim-perl
