@@ -240,7 +240,7 @@ set mps+=<:>
 " | a    - all previous modes
 " | r    - for hit-enter and more-mode
 " `-----
-"set mouse=a 
+set mouse=a 
 " }}}
 
 " Options initiating with [N]
