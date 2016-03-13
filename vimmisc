@@ -50,3 +50,6 @@ let test#perl#prove#options = "--exec 'perl6 -I lib'"
 
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
+" save and reload the folds see also :help 'views-sessions
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
