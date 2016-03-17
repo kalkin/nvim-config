@@ -1,6 +1,6 @@
 " Information 
+" vim:foldmarker={{{,}}} tw=80 foldmethod=marker ft=vim foldlevel=0
 " {{{
-" vim:foldmarker={{{,}}} tw=80 ft=vim
 " Last Modified [ 2010-09-15 ]
 "
 " Structure of this file:
