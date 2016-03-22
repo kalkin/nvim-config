@@ -20,8 +20,10 @@
 
 
 " Quickly edit/reload the vimrc 
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>vm :e ~/.vim/vimmisc<CR>
+nmap <silent> <leader>vs :e ~/.vim/vimsettings<CR>
+nmap <silent> <leader>vb :e ~/.vim/vimbindings<CR>
+nmap <silent> <leader>sv :so ~/.vim/vimrc<CR>
 
 
 " C-\ - Open the definition in a new tab
