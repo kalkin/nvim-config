@@ -21,8 +21,11 @@
 
 " Quickly edit/reload the vimrc 
 nmap <silent> <leader>vm :e ~/.vim/vimmisc<CR>
+nmap <silent> <leader>vM :tabe ~/.vim/vimmisc<CR>
 nmap <silent> <leader>vs :e ~/.vim/vimsettings<CR>
+nmap <silent> <leader>vS :tabe ~/.vim/vimsettings<CR>
 nmap <silent> <leader>vb :e ~/.vim/vimbindings<CR>
+nmap <silent> <leader>vB :tabe ~/.vim/vimbindings<CR>
 nmap <silent> <leader>sv :so ~/.vim/vimrc<CR>
 
 
