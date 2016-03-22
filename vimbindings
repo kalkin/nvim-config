@@ -28,6 +28,7 @@ nmap <silent> <leader>vb :e ~/.vim/vimbindings<CR>
 nmap <silent> <leader>vB :tabe ~/.vim/vimbindings<CR>
 nmap <silent> <leader>sv :so ~/.vim/vimrc<CR>
 
+nmap <silent> <leader>s :Yanks<CR>
 
 " C-\ - Open the definition in a new tab
 " A-] - Open the definition in a vertical split
@@ -107,3 +108,10 @@ nmap <silent> <leader>gs :Gstatus<CR>
 nmap <silent> <leader>gc :Gcommit --verbose<CR>
 nmap <silent> <leader>gC :Gcommit --amend --verbose<CR>
 nmap <silent> <leader>ga :Gwrite<CR>
+
+let g:EasyClipUseCutDefaults = 0
+
+nmap s <Plug>MoveMotionPlug
+xmap s <Plug>MoveMotionXPlug
+nmap ss <Plug>MoveMotionLinePlug
+

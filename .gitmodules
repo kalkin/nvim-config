@@ -46,3 +46,9 @@
 [submodule "bundle/vim-yapf-format"]
 	path = bundle/vim-yapf-format
 	url = https://github.com/pignacio/vim-yapf-format
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "bundle/vim-easyclip"]
+	path = bundle/vim-easyclip
+	url = https://github.com/svermeulen/vim-easyclip
