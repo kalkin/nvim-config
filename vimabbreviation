@@ -14,3 +14,4 @@ iab Gruss Gruß
 iab Gruesse Grüße
 ab NRM :Author:    Kalkin Sam<CR>:Email:     mail@kalkin.de<CR>:Date:      <C-R>=strftime("%Y-%m-%d")<CR>
 iab ME Bahtiar `kalkin-` Gadimov <bahtiar@gadimov.de>
+iab MY Copyright (C) <C-R>=strftime("%Y")<CR> Bahtiar `kalkin-` Gadimov <bahtiar@gadimov.de>
