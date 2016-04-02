@@ -1,6 +1,6 @@
 " Information
 " {{{
-" vim:foldmarker={{{,}}} tw=80 ft=vim
+" vim: foldmarker={{{,}}} tw=80 ft=vim fdm=marker
 " Last Modified [ 2010-09-15 ]
 " 
 " This file defines mappings ("map")
@@ -19,7 +19,7 @@
 "}}}
 
 
-" Quickly edit/reload the vimrc 
+" Quickly edit/reload the vimrc  {{{
 nmap <silent> <leader>vm :e ~/.vim/vimmisc<CR>
 nmap <silent> <leader>vM :tabe ~/.vim/vimmisc<CR>
 nmap <silent> <leader>vs :e ~/.vim/vimsettings<CR>
@@ -27,9 +27,12 @@ nmap <silent> <leader>vS :tabe ~/.vim/vimsettings<CR>
 nmap <silent> <leader>vb :e ~/.vim/vimbindings<CR>
 nmap <silent> <leader>vB :tabe ~/.vim/vimbindings<CR>
 nmap <silent> <leader>sv :so ~/.vim/vimrc<CR>
-
+" }}}
+nmap <silent> <leader>o :CommandT<CR>
 nmap <silent> <leader>s :Yanks<CR>
 nmap <silent> <leader>u :UndotreeToggle<CR>
+nmap <silent> <leader>ln :lnext<CR>
+nmap <silent> <leader>lp :lprev<CR>
 
 " C-\ - Open the definition in a new tab
 " A-] - Open the definition in a vertical split
@@ -37,8 +40,9 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 
+nmap <silent> <leader>fp :Isort <CR> :YapfFullFormat<CR>
 
-map Qw :bd<CR>
+map q<SPACE> :bd<CR>
 map QQ :qall!<CR>
 
 " Unmap Ex-Mode
@@ -71,10 +75,6 @@ noremap <F3>  :if 1 == &hls \| noh \| else \| set hls \| endif \| <CR>
 " paste mode
 noremap <F4> :set invpaste<CR><Bar>:echo "Paste Mode: " . strpart("OffOn", 3 * &paste, 3)<CR>
 
-" Switch between foldmarkers
-:map <F5> :if &foldmarker == '{,}' \| set foldmarker={{{,}}} 
-            \\| elseif &foldmarker== '{{{,}}}' \| set foldmarker={,} \| endif <CR>
-
 " Toggle relative numbers on and off
 :map <F6>  :if 1 == &rnu \|set nornu \| set nu \| else \| set rnu  \| endif \| <CR>
 
@@ -99,12 +99,11 @@ map <silent> e <Plug>CamelCaseMotion_e
 sunmap w
 sunmap b
 "sunmap e  
-"
-nnoremap ]e :lnext<CR>
-nnoremap [e :lprev<CR>
+
 
 " Git fugitive bindings
 nmap <silent> <leader>gd :Gdiff<CR>
+nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>gs :Gstatus<CR>
 nmap <silent> <leader>gc :Gcommit --verbose<CR>
 nmap <silent> <leader>gC :Gcommit --amend --verbose<CR>
