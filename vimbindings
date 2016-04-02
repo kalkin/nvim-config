@@ -29,6 +29,7 @@ nmap <silent> <leader>vB :tabe ~/.vim/vimbindings<CR>
 nmap <silent> <leader>sv :so ~/.vim/vimrc<CR>
 
 nmap <silent> <leader>s :Yanks<CR>
+nmap <silent> <leader>u :UndotreeToggle<CR>
 
 " C-\ - Open the definition in a new tab
 " A-] - Open the definition in a vertical split

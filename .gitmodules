@@ -10,9 +10,6 @@
 [submodule "lib/sparkup"]
 	path = lib/sparkup
 	url = https://github.com/rstacruz/sparkup.git
-[submodule "bundle/histwin"]
-	path = bundle/histwin
-	url = https://github.com/chrisbra/histwin.vim.git
 [submodule "bundle/IndentAnything"]
 	path = bundle/IndentAnything
 	url = https://github.com/vim-scripts/IndentAnything.git
@@ -58,3 +55,6 @@
 [submodule "bundle/Vim-Jinja2-Syntax"]
 	path = bundle/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax
+[submodule "bundle/undotree"]
+	path = bundle/undotree
+	url = https://github.com/mbbill/undotree
