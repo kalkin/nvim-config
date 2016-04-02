@@ -19,7 +19,7 @@ filetype plugin on
 
 colorscheme solarized
 
-let mapleader=","
+let mapleader=" "
 
 " Needed for loading own snippets and not the snipmate snippets
 let g:snippets_dir="~/.vim/snippets"
