@@ -71,4 +71,7 @@ set foldtext=NeatFoldText()
 let g:undotree_SplitWidth = 40
 let g:undotree_SetFocusWhenToggle = 1
 
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+
 let g:indentLine_char = '┆'
