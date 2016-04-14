@@ -17,3 +17,6 @@ config
 kwargs
 str
 workflow
+LVM
+sudo
+Camelcase
