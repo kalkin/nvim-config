@@ -26,13 +26,21 @@ nmap <silent> <leader>vs :e ~/.vim/vimsettings<CR>
 nmap <silent> <leader>vS :tabe ~/.vim/vimsettings<CR>
 nmap <silent> <leader>vb :e ~/.vim/vimbindings<CR>
 nmap <silent> <leader>vB :tabe ~/.vim/vimbindings<CR>
+nmap <silent> <leader>va :e ~/.vim/vimabbreviation<CR>
+nmap <silent> <leader>vA :tabe ~/.vim/vimabbreviation<CR>
 nmap <silent> <leader>sv :so ~/.vim/vimrc<CR>
 " }}}
 nmap <silent> <leader>o :CommandT<CR>
 nmap <silent> <leader>s :Yanks<CR>
+nmap <silent> <leader>q :bd<CR>
 nmap <silent> <leader>u :UndotreeToggle<CR>
 nmap <silent> <leader>ln :lnext<CR>
 nmap <silent> <leader>lp :lprev<CR>
+
+nmap <silent> <leader>f5 :tabe ~/bin/start-f5<CR>
+nmap <silent> <leader>f6 :tabe ~/bin/start-f6<CR>
+nmap <silent> <leader>f7 :tabe ~/bin/start-f7<CR>
+nmap <silent> <leader>f8 :tabe ~/bin/start-f8<CR>
 
 " C-\ - Open the definition in a new tab
 " A-] - Open the definition in a vertical split
@@ -74,9 +82,6 @@ noremap <F3>  :if 1 == &hls \| noh \| else \| set hls \| endif \| <CR>
 
 " paste mode
 noremap <F4> :set invpaste<CR><Bar>:echo "Paste Mode: " . strpart("OffOn", 3 * &paste, 3)<CR>
-
-" Toggle relative numbers on and off
-:map <F6>  :if 1 == &rnu \|set nornu \| set nu \| else \| set rnu  \| endif \| <CR>
 
 " Toglle spellchecking between en_us and de_20 (new spelling
 :map<F7> :if 1 == &spell \| set nospell \| else \| set spell \| endif \| <CR>
