@@ -70,3 +70,5 @@ set foldtext=NeatFoldText()
 
 let g:undotree_SplitWidth = 40
 let g:undotree_SetFocusWhenToggle = 1
+
+let g:indentLine_char = '┆'
