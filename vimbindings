@@ -27,8 +27,9 @@ nmap <silent> <leader>va :tabe ~/.vim/vimabbreviation<CR>
 nmap <silent> <leader>sv :so ~/.vim/vimrc<CR>
 " }}}
 "
-nmap <silent> <leader>o :Unite file buffer -start-insert<CR>
-nmap <silent> <leader>O :Unite outline<CR>
+nmap <silent> <leader>o :CommandT<CR>
+nmap <silent> <leader>O :Unite outline -start-insert<CR>
+nmap <silent> <leader>b :Unite buffer -start-insert<CR>
 nmap <silent> <leader>s :Yanks<CR>
 nmap <silent> <leader>q :bd<CR>
 nmap <silent> <leader>u :UndotreeToggle<CR>
