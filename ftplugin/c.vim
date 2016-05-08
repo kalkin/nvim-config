@@ -5,3 +5,6 @@ setlocal shiftwidth=2
 setlocal softtabstop=2
 setlocal textwidth=79
 setlocal fo-=ro fo+=cql
+let g:syntastic_c_compiler_options="-Wall -Wpedantic -Wextra -fno-strict-aliasing -std=c11 -Wshadow"
+
+nmap <silent> <leader>ff :!indent %<CR><CR>
