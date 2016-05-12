@@ -11,3 +11,12 @@ iab MY # Copyright (C) <C-R>=strftime("%Y")<CR> Bahtiar `kalkin-` Gadimov <bahti
 
 ab print_function from __future__ print_function<CR>
 iab _main_ def main(args=None):<CR>return 0<CR><CR>if __name__ == '__main__':
+
+
+" Key Bindings
+nmap <silent> <leader>vm :tabe ~/.vim/ftplugin/python.vim<CR>
+
+map <C-]> :call jedi#goto()<CR>
+
+nmap <silent> <leader><Return> :Isort <CR> :YapfFullFormat<CR>
+vmap <silent> <leader><Return>  :YapfFormat<CR>

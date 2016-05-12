@@ -46,9 +46,6 @@ nmap <silent> <leader>f8 :tabe ~/bin/start-f8<CR>
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
-
-nmap <silent> <leader>fp :Isort <CR> :YapfFullFormat<CR>
-
 map q<SPACE> :bd<CR>
 map QQ :qall!<CR>
 
