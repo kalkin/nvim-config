@@ -9,9 +9,9 @@
 "
 " }}}
 
-iab TDY <C-R>=strftime("%Y-%m-%d")<CR>
-iab Gruss Gruß
-iab Gruesse Grüße
-ab NRM :Author:    Kalkin Sam<CR>:Email:     mail@kalkin.de<CR>:Date:      <C-R>=strftime("%Y-%m-%d")<CR>
-iab ME Bahtiar `kalkin-` Gadimov <bahtiar@gadimov.de>
+ab TDY <C-R>=strftime("%Y-%m-%d")
+ab Gruss Gruß
+ab Gruesse Grüße
+ab ME Bahtiar `kalkin-` Gadimov <bahtiar@gadimov.de>
+ab ME_MAN Bahtiar `kalkin-` Gadimov <bahtiar at gadimov dot de><CR>
 iab MY Copyright (C) <C-R>=strftime("%Y")<CR> Bahtiar `kalkin-` Gadimov <bahtiar@gadimov.de>
