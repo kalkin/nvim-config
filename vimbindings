@@ -52,9 +52,19 @@ map QQ :qall!<CR>
 " Unmap Ex-Mode
 :map Q <Nop>
 
-:imap <C-C> <C-HOME>
-:imap <C-V> <C-END>
-imap <F2>  :Isort <CR> :YapfFullFormat<CR>
+noremap <S-F12> :lclose<CR>
+noremap <F12>  :lopen<CR>
+
+" toggle highlight search (folke)
+:map <F3> :if 1 == &hls \| noh \| else \| set hls \| endif \|<CR>
+
+" paste mode
+:map <F4> :set invpaste<CR><Bar>:echo "Paste Mode: " . strpart("OffOn", 3 * &paste, 3)<CR>
+
+" Toggle spell checking between en_us and de_20 (new spelling
+:map <F7> :if 1 == &spell \| set nospell \| else \| set spell \| endif \|<CR>
+
+imap <F2> <Esc><F2>i
 imap <F3> <Esc><F3>i
 imap <F4> <Esc><F4>i
 imap <F5> <Esc><F5>i
@@ -66,23 +76,6 @@ imap <F10> <Esc><F10>i
 imap <F11> <Esc><F11>i
 imap <F12> <Esc><F12>i
 
-
-noremap <S-F12> :lclose<Enter>:lclose<Enter>
-noremap <F12>  :lopen<Enter>
-
-noremap <F2>  :Isort <CR> :YapfFullFormat<CR>
-vmap <F2>  :YapfFormat<CR>
-
-" toggle highlight search (folke)
-noremap <F3>  :if 1 == &hls \| noh \| else \| set hls \| endif \| <CR>
-
-" paste mode
-noremap <F4> :set invpaste<CR><Bar>:echo "Paste Mode: " . strpart("OffOn", 3 * &paste, 3)<CR>
-
-" Toglle spellchecking between en_us and de_20 (new spelling
-:map<F7> :if 1 == &spell \| set nospell \| else \| set spell \| endif \| <CR>
-
-:map <F9> :UB<CR>
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -102,13 +95,14 @@ sunmap b
 "sunmap e  
 
 
-" Git fugitive bindings
+" Git fugitive bindings {{{
 nmap <silent> <leader>gd :Gdiff<CR>
 nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>gs :Gstatus<CR>
 nmap <silent> <leader>gc :Gcommit --verbose<CR>
 nmap <silent> <leader>gC :Gcommit --amend --verbose<CR>
 nmap <silent> <leader>ga :Gwrite<CR>
+" }}}
 
 let g:EasyClipUseCutDefaults = 0
 
