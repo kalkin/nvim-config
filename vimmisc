@@ -48,11 +48,11 @@ let g:syntastic_perl6_lib_path= ['lib']
 "" Hardcode handling for Perl 6. We never use perl 5 so it does not matter
 let test#perl#prove#options = "--exec 'perl6 -I lib'"
 
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
+" autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " save and reload the folds see also :help 'views-sessions
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave *.* mkview
+au BufWinEnter *.* silent loadview
 
 " source https://www.linux.com/learn/tutorials/442438-vim-tips-folding-fun
 function! NeatFoldText() "{{{
