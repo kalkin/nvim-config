@@ -44,7 +44,6 @@ nmap <silent> <leader>f8 :tabe ~/bin/start-f8<CR>
 " C-\ - Open the definition in a new tab
 " A-] - Open the definition in a vertical split
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 map q<SPACE> :bd<CR>
 map QQ :qall!<CR>
