@@ -70,3 +70,6 @@
 [submodule "bundle/NrrwRgn"]
 	path = bundle/NrrwRgn
 	url = https://github.com/chrisbra/NrrwRgn
+[submodule "bundle/vim-ft-bzl"]
+	path = bundle/vim-ft-bzl
+	url = https://github.com/google/vim-ft-bzl
