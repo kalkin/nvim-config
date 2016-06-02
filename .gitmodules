@@ -73,3 +73,6 @@
 [submodule "bundle/vim-ft-bzl"]
 	path = bundle/vim-ft-bzl
 	url = https://github.com/google/vim-ft-bzl
+[submodule "bundle/pkgbuild"]
+	path = bundle/pkgbuild
+	url = https://github.com/Firef0x/PKGBUILD.vim
