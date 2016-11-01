@@ -103,9 +103,11 @@ nmap <silent> <leader>gC :Gcommit --amend --verbose<CR>
 nmap <silent> <leader>ga :Gwrite<CR>
 " }}}
 
-let g:EasyClipUseCutDefaults = 0
+imap <A-BS> <C-W>
 
-nmap s <Plug>MoveMotionPlug
-xmap s <Plug>MoveMotionXPlug
-nmap ss <Plug>MoveMotionLinePlug
+map <leader>d "_d
+map <leader>c "_c
 
+nmap <BS> "_xh
+nmap <A-BS> "_db
+nmap <A-Del> "_dw
