@@ -194,6 +194,10 @@ set fdo=insert,jump,tag,mark,quickfix,search
 
 " }}}
 
+" Options initiating with [G]
+set guifont=Fira\ Mono\ 12
+set guioptions-=TrL
+
 " Options initiating with [H]
 " {{{
 
