@@ -13,6 +13,7 @@
 [submodule "bundle/IndentAnything"]
 	path = bundle/IndentAnything
 	url = https://github.com/vim-scripts/IndentAnything.git
+    ignore = untracked
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
@@ -79,3 +80,4 @@
 [submodule "bundle/YankRing"]
 	path = bundle/YankRing
 	url = https://github.com/vim-scripts/YankRing.vim
+    ignore = untracked
