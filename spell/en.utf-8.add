@@ -21,3 +21,5 @@ LVM
 sudo
 Camelcase
 TemplateVM's
+mypy
+pylint

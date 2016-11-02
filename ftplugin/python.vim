@@ -1,14 +1,8 @@
 " Settings
 setlocal foldmethod=indent
 
-function! SetupEnvironment()
-  let l:path = expand('%:p')
-  if l:path =~ '/home/user/qb/r4/qubes-src/core-admin'
-	let g:syntastic_python_pylint_args = '--rcfile=/home/user/qb/r4/qubes-src/core-admin/.pylintrc' 
-  endif
-endfunction
-
-autocmd! BufReadPost,BufNewFile *.py call SetupEnvironment()
+let g:syntastic_python_checkers=['pylint']
+let g:syntastic_python_pylint_args = '--rcfile='. getcwd() . '/.pylintrc' 
 
 
 " Often used abbreviations
