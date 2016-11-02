@@ -207,6 +207,8 @@ set hls
 " [global] |'history'| Number of command-lines that are remembered
 set hi=1000
 
+set hidden
+
 " }}}
 
 " Options initiating with [I]
