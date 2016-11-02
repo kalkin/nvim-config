@@ -80,3 +80,6 @@ let g:indentLine_char = '┆'
 augroup HiglightTODO
     autocmd Syntax * call matchadd('Todo',  '\W\zs\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)')
 augroup END
+
+" Autoresize windows on terminal size changes
+:autocmd VimResized * wincmd =
