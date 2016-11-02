@@ -55,6 +55,7 @@ map QQ :qall!<CR>
 
 noremap <S-F12> :lclose<CR>
 noremap <F12>  :lopen<CR>
+map <F1>  :help 
 
 " toggle highlight search (folke)
 :map <F3> :if 1 == &hls \| noh \| else \| set hls \| endif \|<CR>
