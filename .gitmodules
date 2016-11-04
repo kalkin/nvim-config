@@ -81,3 +81,6 @@
 	path = bundle/YankRing
 	url = https://github.com/vim-scripts/YankRing.vim
     ignore = untracked
+[submodule "bundle/rdf"]
+	path = bundle/rdf
+	url = https://github.com/niklasl/vim-rdf
