@@ -26,9 +26,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "bundle/vim-livedown"]
-	path = bundle/vim-livedown
-	url = https://github.com/shime/vim-livedown.git
 [submodule "bundle/vim-bazel"]
 	path = bundle/vim-bazel
 	url = https://github.com/davidzchen/vim-bazel.git
