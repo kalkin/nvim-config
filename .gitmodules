@@ -29,9 +29,6 @@
 [submodule "bundle/vim-bazel"]
 	path = bundle/vim-bazel
 	url = https://github.com/davidzchen/vim-bazel.git
-[submodule "bundle/vim-perl"]
-	path = bundle/vim-perl
-	url = https://github.com/vim-perl/vim-perl
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -81,3 +78,6 @@
 [submodule "bundle/rdf"]
 	path = bundle/rdf
 	url = https://github.com/niklasl/vim-rdf
+[submodule "bundle/vim-perl6"]
+	path = bundle/vim-perl6
+	url = https://github.com/vim-perl/vim-perl6
