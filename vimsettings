@@ -195,9 +195,11 @@ set fdo=insert,jump,tag,mark,quickfix,search
 " }}}
 
 " Options initiating with [G]
+" {{{
 set guifont=Fira\ Mono\ 12
 set guioptions-=TrL
-
+" }}}
+"
 " Options initiating with [H]
 " {{{
 
@@ -320,7 +322,7 @@ set spelllang =en,de_20
 set sb
 
 " [global] |'splitright'| New window is put right of the current one
-set spr
+set nospr
 
 " [global] |'spellsuggest'| Method(s) used to suggest spelling corrections
 set sps=best,10
