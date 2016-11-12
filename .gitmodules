@@ -81,3 +81,9 @@
 [submodule "bundle/vim-perl6"]
 	path = bundle/vim-perl6
 	url = https://github.com/vim-perl/vim-perl6
+[submodule "bundle/vim-lua"]
+	path = bundle/vim-lua
+	url = https://github.com/xolox/vim-lua-ftplugin
+[submodule "bundle/vim-misc"]
+	path = bundle/vim-misc
+	url = https://github.com/xolox/vim-misc
