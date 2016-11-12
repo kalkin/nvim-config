@@ -72,6 +72,8 @@ set cwh=5
 " [global] |'cp'| Vim either more Vi-compatible or make Vim really usefull
 set nocompatible        "this is vim not vi!
 
+set clipboard=unnamedplus
+
 " [global] |'completeopt'| Options for Insert mode completion
 "
 " ,--------[ Options ]
