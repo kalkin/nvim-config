@@ -18,7 +18,10 @@ syntax on
 " Filetype plugin on!
 filetype plugin on
 
+set t_Co=256
 colorscheme solarized
+let g:solarized_termcolors = 256
+hi CursorLine ctermbg=234
 
 let mapleader=" "
 
