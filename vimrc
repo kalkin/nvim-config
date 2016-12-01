@@ -6,10 +6,10 @@
 " This file just sources my configuration files. 
 "
 " }}}
-source ~/.vim/vimsettings
-source ~/.vim/vimmisc
-source ~/.vim/vimautocmd
-source ~/.vim/vimfunctions
-source ~/.vim/vimabbreviation
-source ~/.vim/vimbindings
+source ~/.config/vim/vimsettings
+source ~/.config/vim/vimmisc
+source ~/.config/vim/vimautocmd
+source ~/.config/vim/vimfunctions
+source ~/.config/vim/vimabbreviation
+source ~/.config/vim/vimbindings
 
