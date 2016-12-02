@@ -9,9 +9,6 @@
 
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
-execute pathogen#infect()
-call pathogen#helptags()
-
 " Syntax on!
 syntax on
 
@@ -19,7 +16,7 @@ syntax on
 filetype plugin on
 
 set t_Co=256
-colorscheme solarized
+colorscheme NeoSolarized
 let g:solarized_termcolors = 256
 
 let mapleader=" "
@@ -27,26 +24,6 @@ let mapleader=" "
 " Needed for loading own snippets and not the snipmate snippets
 let g:snippets_dir="~/.vim/snippets"
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-
-" Default: 0
-" If enabled, syntastic will do syntax checks when buffers are first loaded as
-" well as on saving >
-let g:syntastic_check_on_open=0
-
-let g:syntastic_enable_signs=1
-
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-
-let g:syntastic_auto_loc_list=1
-
-let g:syntastic_perl6_lib_path= ['lib']
 
 "" Hardcode handling for Perl 6. We never use perl 5 so it does not matter
 let test#perl#prove#options = "--exec 'perl6 -I lib'"
@@ -74,8 +51,8 @@ set foldtext=NeatFoldText()
 let g:undotree_SplitWidth = 40
 let g:undotree_SetFocusWhenToggle = 1
 
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"call unite#filters#sorter_default#use(['sorter_rank'])
 
 let g:indentLine_char = '┆'
 
@@ -85,3 +62,5 @@ augroup END
 
 " Autoresize windows on terminal size changes
 :autocmd VimResized * wincmd =
+
+autocmd! BufWritePost * Neomake

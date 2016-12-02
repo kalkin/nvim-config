@@ -1,89 +1,12 @@
 [submodule "vim-pathogen"]
 	path = vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/delimitMate"]
-	path = bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule "lib/sparkup"]
 	path = lib/sparkup
 	url = https://github.com/rstacruz/sparkup.git
-[submodule "bundle/IndentAnything"]
-	path = bundle/IndentAnything
-	url = https://github.com/vim-scripts/IndentAnything.git
-    ignore = untracked
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/vim-coffe-script"]
-	path = bundle/vim-coffe-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "bundle/vim-bazel"]
 	path = bundle/vim-bazel
 	url = https://github.com/davidzchen/vim-bazel.git
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-isort"]
-	path = bundle/vim-isort
-	url = https://github.com/fisadev/vim-isort.git
-[submodule "bundle/vim-yapf-format"]
-	path = bundle/vim-yapf-format
-	url = https://github.com/pignacio/vim-yapf-format
-[submodule "bundle/vim-repeat"]
-	path = bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim
-[submodule "bundle/Vim-Jinja2-Syntax"]
-	path = bundle/Vim-Jinja2-Syntax
-	url = https://github.com/Glench/Vim-Jinja2-Syntax
-[submodule "bundle/undotree"]
-	path = bundle/undotree
-	url = https://github.com/mbbill/undotree
-[submodule "bundle/unite.vim"]
-	path = bundle/unite.vim
-	url = https://github.com/Shougo/unite.vim
-[submodule "bundle/unite-outline"]
-	path = bundle/unite-outline
-	url = https://github.com/Shougo/unite-outline
-[submodule "bundle/indentLine"]
-	path = bundle/indentLine
-	url = https://github.com/Yggdroot/indentLine
-[submodule "bundle/NrrwRgn"]
-	path = bundle/NrrwRgn
-	url = https://github.com/chrisbra/NrrwRgn
-[submodule "bundle/vim-ft-bzl"]
-	path = bundle/vim-ft-bzl
-	url = https://github.com/google/vim-ft-bzl
-[submodule "bundle/pkgbuild"]
-	path = bundle/pkgbuild
-	url = https://github.com/Firef0x/PKGBUILD.vim
-[submodule "bundle/vim-vinegar"]
-	path = bundle/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar
-[submodule "bundle/YankRing"]
-	path = bundle/YankRing
-	url = https://github.com/vim-scripts/YankRing.vim
-    ignore = untracked
-[submodule "bundle/rdf"]
-	path = bundle/rdf
-	url = https://github.com/niklasl/vim-rdf
-[submodule "bundle/vim-perl6"]
-	path = bundle/vim-perl6
-	url = https://github.com/vim-perl/vim-perl6
-[submodule "bundle/vim-lua"]
-	path = bundle/vim-lua
-	url = https://github.com/xolox/vim-lua-ftplugin
-[submodule "bundle/vim-misc"]
-	path = bundle/vim-misc
-	url = https://github.com/xolox/vim-misc

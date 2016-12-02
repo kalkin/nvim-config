@@ -115,18 +115,6 @@ set complete+=k
 " [buffer] |'confirm'| Ask what to do about unsaved/read-only files
 set cf
 
-" [glo-lo] |'cryptmethod'| Type of encryption to use for file writing
-" ,--------[ Cryto Methods ]
-" | zip      PkZip compatible method.  A weak kind of encryption.  Backwards
-" |          compatible with Vim 7.2 and older.
-" |  					*blowfish*
-" | blowfish Blowfish method.  Strong encryption.  Requires Vim 7.3 or later,
-" |          files can NOT be read by Vim 7.2 and older.  This adds a "seed"
-" |          to the file, every time you write the file the encrypted bytes
-" |          will be different.
-" `--------
-set cryptmethod=blowfish
-
 " [buffer] |'cursorline'| Highlight the screen line of the cursor
 set cul
 
