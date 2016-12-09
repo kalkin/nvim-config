@@ -248,7 +248,7 @@ set mouse=a
 set nf=alpha,octal,hex
 
 " [window] |'number'| Show line numbers
-set nu
+set nonu
 
 " [window] |'numberwidth'| Minimal number of columns to use for the line number.
 set nuw=3
