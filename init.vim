@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/bundle')
     Plug 'mhinz/vim-grepper'
     Plug 'neomake/neomake'
     Plug 'niklasl/vim-rdf'
+    Plug 'vim-perl/vim-perl6'
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-repeat'
