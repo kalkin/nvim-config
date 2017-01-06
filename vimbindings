@@ -31,6 +31,7 @@ nmap <silent> <leader>sv :so ~/.config/nvim/init.vim<CR>
 nmap <silent> <leader>e :call fzf#run(fzf#wrap({'source':'ag -g "" ~/.config/nvim/'}))<CR>
 nmap <silent> <leader>o :call fzf#run(fzf#wrap({'source':'ag -g ""'}))<CR>
 nmap <silent> <leader>O :Unite outline -start-insert<CR>
+nmap \ "_
 
 function! s:buflist()
 	redir => ls
