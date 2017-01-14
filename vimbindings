@@ -161,6 +161,7 @@ nmap <silent> <leader>gc :Gcommit --verbose<CR>
 nmap <silent> <leader>gC :Gcommit --amend --verbose<CR>
 nmap <silent> <leader>ga :Gwrite<CR>
 " }}}
+nmap \ "_
 
 imap <A-BS> <C-W>
 
