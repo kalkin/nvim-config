@@ -25,3 +25,5 @@ pylint
 mypy
 pylint
 ungrouped
+method
+method
