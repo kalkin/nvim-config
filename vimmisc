@@ -15,9 +15,8 @@ syntax on
 " Filetype plugin on!
 filetype plugin on
 
-set t_Co=256
+set termguicolors
 colorscheme NeoSolarized
-let g:solarized_termcolors = 256
 
 let mapleader=" "
 
