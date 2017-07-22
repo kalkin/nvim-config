@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/bundle')
     Plug 'vim-perl/vim-perl6'
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
     Plug 'tpope/vim-repeat'
     Plug 'xolox/vim-lua-ftplugin'
     Plug 'xolox/vim-misc'
