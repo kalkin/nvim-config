@@ -199,6 +199,15 @@ set fdo=insert,jump,tag,mark,quickfix,search
 " {{{
 set guifont=Fira\ Mono\ 12
 set guioptions-=TrL
+
+" [global] |'greprg'| Program to use for the |:grep| command.
+" default  "grep -n $* /dev/null"
+
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+
 " }}}
 "
 " Options initiating with [H]
