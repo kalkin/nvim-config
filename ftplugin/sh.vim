@@ -81,4 +81,22 @@ endfunction
 
 set foldmethod=expr
 set foldexpr=PerfectFold(v:lnum)
-set foldcolumn=4
+
+function! CleanLine(line)
+    return a:line
+endfunction
+
+function! ShellFold() 
+  let l:line = CleanLine(getline(v:foldstart))
+  if l:line =~# '^\s*#\+\s*$' " when line only consist of comments skip it
+    let l:line = CleanLine(getline(v:foldstart + 1))
+  endif
+  let lines_count = v:foldend - v:foldstart + 1
+  let lines_count_text = printf('%3s 🖹', lines_count)
+  let foldchar = matchstr(&fillchars, 'fold:\zs.')
+  let foldtextstart = strpart('+' . repeat(foldchar, v:foldlevel*2) . l:line, 0, (winwidth(0)*2)/3)
+  let foldtextend = lines_count_text
+  let foldtextlength = strlen(substitute(foldtextstart . foldtextend, '.', 'x', 'g')) + &foldcolumn
+  return foldtextstart . repeat(foldchar, &tw - foldtextlength+1) . foldtextend
+endfunction
+set foldtext=ShellFold()
