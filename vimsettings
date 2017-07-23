@@ -1,22 +1,20 @@
-" Information 
-" vim:foldmarker={{{,}}} tw=80 foldmethod=marker ft=vim foldlevel=0
-" {{{
-" Last Modified [ 2010-09-15 ]
+" vim: fmr={{{,}}} tw=80 fdm=marker ft=vim
+" Information {{{
 "
-" Structure of this file:
-"       This file defines the vim settings ("set"). They are ordered alphabetically to
-"       make it easier to access a specific item. Basically a simple way to sort
-"       data :-) These are not all the possible settings, but the ones that I
-"       have found relevant to control. (:h options). To see all options use
-"       :help option-list
+" This file defines the vim settings ("set"). They are ordered alphabetically to
+" make it easier to access a specific item. Basically a simple way to sort data
+" ☺. These are not all the possible settings, but the ones that I have found
+" relevant to control. For general info on options see ':h options'. To see all
+" options use ':help option-list'
 "
-" setting description:
+" Settings Description: {{{
 " [global] ... global setting
 " [buffer] ... local to a buffer
 " [window] ... settings for a window
 " [glo-lo] ... global or local (buffer) setting. :setlocal for local value
 " 
 " Some mappings and options are commented out. Remove the comment to enable them.
+" }}}
 " 
 " }}}
 
