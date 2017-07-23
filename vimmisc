@@ -24,9 +24,6 @@ let mapleader=" "
 let g:snippets_dir="~/.vim/snippets"
 
 
-"" Hardcode handling for Perl 6. We never use perl 5 so it does not matter
-let test#perl#prove#options = "--exec 'perl6 -I lib'"
-
 " autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " save and reload the folds see also :help 'views-sessions
