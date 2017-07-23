@@ -1,14 +1,9 @@
-" Information 
-" {{{
-" vim:foldmarker={{{,}}} tw=80 ft=vim
-" Last Modified [ 2010-09-16 ]
-" 
-" This file contains all configurations which doesn't fit elsewhere
+" vim: fmr={{{,}}} fdm=marker tw=80 ft=vim
 "
+" Information {{{
+" This file contains all configurations which doesn't fit elsewhere
 " }}}
 
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
 " Syntax on!
 syntax on
 
