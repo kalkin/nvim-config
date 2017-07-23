@@ -146,6 +146,19 @@ set expandtab
 " [buffer] |'fileencoding'| multicultural, even in encodings
 set fenc=utf-8
 
+" [global] |'fillchars'| Characters to fill the statuslines and vertical
+" separators.  It is a comma separated list of items:
+"	  item		default		Used for ~
+"	  stl:c		' ' or '^'	statusline of the current window
+"	  stlnc:c	' ' or '='	statusline of the non-current windows
+"	  vert:c	'|'		vertical separators |:vsplit|
+"	  fold:c	'-'		filling 'foldtext'
+"	  diff:c	'-'		deleted lines of the 'diff' option
+" (default "vert:|,fold:-")
+
+set fcs=vert:\|,fold:\ 
+
+
 " [window] |'fdm'| Is folding really evile?
 set foldmethod=marker
 
