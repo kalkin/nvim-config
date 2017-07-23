@@ -12,6 +12,8 @@
 " save and reload the folds see also :help 'views-sessions
 augroup vimrc
     autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l*    lwindow
 augroup END
 
 au vimrc BufWinLeave *.* mkview
