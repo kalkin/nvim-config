@@ -28,7 +28,7 @@ let g:snippets_dir="~/.vim/snippets"
 
 " save and reload the folds see also :help 'views-sessions
 au BufWinLeave *.* mkview
-au BufWinEnter *.* silent loadview
+au BufWinEnter *.* silent! loadview
 
 " source https://www.linux.com/learn/tutorials/442438-vim-tips-folding-fun
 function! NeatFoldText() "{{{
