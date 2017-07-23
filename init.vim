@@ -12,7 +12,6 @@ call plug#begin('~/.config/nvim/bundle')
     Plug 'davidzchen/vim-bazel'
     Plug 'fisadev/vim-isort'
     Plug 'icymind/NeoSolarized'
-    Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
     Plug 'neomake/neomake'
     Plug 'niklasl/vim-rdf'

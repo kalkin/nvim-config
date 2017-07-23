@@ -186,3 +186,5 @@ vnoremap <silent> # :<C-U>
 
 
 let g:grepper = {'tools':     ['ag', 'git']}
+
+nmap g= g+
