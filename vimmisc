@@ -19,19 +19,6 @@ let g:mapleader=' '
 let g:snippets_dir='~/.vim/snippets'
 
 
-" autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
-" save and reload the folds see also :help 'views-sessions
-augroup vimrc
-    autocmd!
-augroup END
-
-au vimrc BufWinLeave *.* mkview
-au vimrc BufWinEnter *.* silent! loadview
-
-au vimrc VimResized * wincmd = " Autoresize windows on terminal size changes
-au vimrc BufWritePost * Neomake
-
 " source https://www.linux.com/learn/tutorials/442438-vim-tips-folding-fun
 function! NeatFoldText() "{{{
   let l:line = substitute(getline(v:foldstart), '^\s*"\?\s*\|\s*"\?\s*{{' . '{\d*\s*', '', 'g')
