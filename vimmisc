@@ -13,17 +13,24 @@ filetype plugin on
 set termguicolors
 colorscheme NeoSolarized
 
-let mapleader=" "
+let g:mapleader=' '
 
 " Needed for loading own snippets and not the snipmate snippets
-let g:snippets_dir="~/.vim/snippets"
+let g:snippets_dir='~/.vim/snippets'
 
 
 " autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " save and reload the folds see also :help 'views-sessions
-au BufWinLeave *.* mkview
-au BufWinEnter *.* silent! loadview
+augroup vimrc
+    autocmd!
+augroup END
+
+au vimrc BufWinLeave *.* mkview
+au vimrc BufWinEnter *.* silent! loadview
+
+au vimrc VimResized * wincmd = " Autoresize windows on terminal size changes
+au vimrc BufWritePost * Neomake
 
 " source https://www.linux.com/learn/tutorials/442438-vim-tips-folding-fun
 function! NeatFoldText() "{{{
@@ -49,8 +56,3 @@ let g:indentLine_char = '┆'
 augroup HiglightTODO
     autocmd Syntax * call matchadd('Todo',  '\W\zs\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)')
 augroup END
-
-" Autoresize windows on terminal size changes
-:autocmd VimResized * wincmd =
-
-autocmd! BufWritePost * Neomake
