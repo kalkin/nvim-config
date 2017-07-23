@@ -19,26 +19,10 @@ let g:mapleader=' '
 let g:snippets_dir='~/.vim/snippets'
 
 
-" source https://www.linux.com/learn/tutorials/442438-vim-tips-folding-fun
-function! NeatFoldText() "{{{
-  let l:line = substitute(getline(v:foldstart), '^\s*"\?\s*\|\s*"\?\s*{{' . '{\d*\s*', '', 'g')
-  let l:lines_count = v:foldend - v:foldstart + 1
-  let l:lines_count_text = '|' . printf('%3s lines', l:lines_count) . '|'
-  let l:foldchar = matchstr(&fillchars, 'fold:\zs.')
-  let l:foldtextstart = strpart('+' . repeat(l:foldchar, v:foldlevel*2) . l:line, 0, (winwidth(0)*2)/3)
-  let l:foldtextlength = strlen(substitute(l:foldtextstart . l:lines_count_text, '.', 'x', 'g')) + &foldcolumn
-  return l:foldtextstart . repeat(l:foldchar, 80-l:foldtextlength) . l:lines_count_text
-endfunction
 set foldtext=NeatFoldText()
-" }}}
 
 let g:undotree_SplitWidth = 40
 let g:undotree_SetFocusWhenToggle = 1
-
-"call unite#filters#matcher_default#use(['matcher_fuzzy'])
-"call unite#filters#sorter_default#use(['sorter_rank'])
-
-let g:indentLine_char = '┆'
 
 augroup HiglightTODO
     autocmd Syntax * call matchadd('Todo',  '\W\zs\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)')

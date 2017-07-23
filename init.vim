@@ -24,9 +24,9 @@ call plug#begin('~/.config/nvim/bundle')
     Plug 'xolox/vim-misc'
 call plug#end()
 source ~/.config/nvim/vimsettings
+source ~/.config/nvim/functions.vim
 source ~/.config/nvim/vimmisc
 source ~/.config/nvim/vimautocmd
-source ~/.config/nvim/vimfunctions
 source ~/.config/nvim/vimabbreviation
 source ~/.config/nvim/vimbindings
 
