@@ -23,10 +23,10 @@ call plug#begin('~/.config/nvim/bundle')
     Plug 'xolox/vim-lua-ftplugin'
     Plug 'xolox/vim-misc'
 call plug#end()
-source ~/.config/nvim/vimsettings
+source ~/.config/nvim/settings.vim
 source ~/.config/nvim/functions.vim
-source ~/.config/nvim/vimmisc
-source ~/.config/nvim/vimautocmd
-source ~/.config/nvim/vimabbreviation
-source ~/.config/nvim/vimbindings
+source ~/.config/nvim/misc.vim
+source ~/.config/nvim/autocmd.vim
+source ~/.config/nvim/abbreviation.vim
+source ~/.config/nvim/bindings.vim
 
