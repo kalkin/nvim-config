@@ -375,7 +375,7 @@ if has('persistent_undo')
     " enable autowrite and persistent undo
     set aw
     set undolevels=5000
-    set undodir=$HOME/.vim/undo-files
+    set undodir=$HOME/.local/share/neovim/undo-files
     set undofile
 endif
 
