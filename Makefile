@@ -29,5 +29,6 @@ about:
 
 uninstall:
 	rm $(TARGETS)
+	rm -rf $(TARGET_DIR)/bundle
 
 reinstall: uninstall install
