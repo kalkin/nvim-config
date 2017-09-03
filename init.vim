@@ -9,7 +9,6 @@
 call plug#begin('~/.config/nvim/bundle')
     Plug 'airblade/vim-gitgutter'
     Plug 'vim-airline/vim-airline'
-    Plug 'davidzchen/vim-bazel'
     Plug 'fisadev/vim-isort'
     Plug 'icymind/NeoSolarized'
     Plug 'mhinz/vim-grepper'
