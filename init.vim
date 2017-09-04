@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/bundle')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-repeat'
+    Plug 'zah/nim.vim'
     Plug 'xolox/vim-lua-ftplugin'
     Plug 'xolox/vim-misc'
 call plug#end()
