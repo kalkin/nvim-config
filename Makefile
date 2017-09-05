@@ -32,3 +32,6 @@ uninstall:
 	rm -rf $(TARGET_DIR)/bundle
 
 reinstall: uninstall install
+
+clean:
+
