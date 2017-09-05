@@ -99,4 +99,4 @@ function! ShellFold()
   let foldtextlength = strlen(substitute(foldtextstart . foldtextend, '.', 'x', 'g')) + &foldcolumn
   return foldtextstart . repeat(foldchar, &tw - foldtextlength+1) . foldtextend
 endfunction
-set foldtext=ShellFold()
+"set foldtext=ShellFold()
