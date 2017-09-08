@@ -245,8 +245,11 @@ set ls=2
 
 " Options initiating with [M]
 " {{{
-" [buffer] |'matchparis'| Pairs of characters that "%" can match
+" [buffer] |'matchpairs'| Pairs of characters that "%" can match
 set mps+=<:>
+set mps+=｢:｣
+set mps+=„:”
+set mps+=«:»
 
 " [global] |'mouse'| Use mouse in vim on console, xterm, ect..
 " ,------[ Mouse Options ]-----
