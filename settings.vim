@@ -46,7 +46,7 @@ set bs=2
 " | wipe		wipe out the buffer from the buffer list, also when 'hidden'
 " |             is set or using |:hide|, like using :bwipeout
 " `--------
-set bh=delete
+set bh=hide
 
 " }}}
 
