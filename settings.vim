@@ -288,6 +288,10 @@ set pvh=20
 
 set printoptions=paper:A4,number:y,header:1,left:5mm,top:5mm,bottom:5mm,right:5mm,duplex:off  "printing options
 
+" [glo-lo] |'pa'| This is a list of directories which will be searched when
+" using the gf|, [f, ]f, ^Wf, |:find|, |:sfind|, |:tabfind| and other commands,
+" Default set to ".,/usr/include,,"
+set path=.,,
 " }}}
 
 " Options initiating with [R]
