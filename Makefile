@@ -13,12 +13,10 @@ TARGETS 	= $(addprefix $(TARGET_DIR)/,$(VIM_FILES))
 
 
 $(TARGET_DIR)/%.vim: %.vim
-	mkdir -p $(@D)
-	cp $< $(@D)
+	install -D $< $@
 
 $(TARGET_DIR)/spell/%: spell/%
-	mkdir -p $(@D)
-	cp $< $(@D)
+	install -D $< $@
 
 install: $(TARGETS)
 	$(info $<)
