@@ -16,6 +16,11 @@ if !isdirectory($XDG_CACHE_HOME . '/vim/backup')
 endif
 set backupdir=$XDG_CACHE_HOME/vim/backup//,/var/tmp//,/tmp//
 
+if !isdirectory($XDG_CACHE_HOME . '/vim/view')
+  call mkdir($XDG_CACHE_HOME . '/vim/view', 'p')
+endif
+set viewdir=$XDG_CACHE_HOME/vim/view
+
 " Double slash does not actually work for backupdir, here's a fix
 augroup Backup
     au BufWritePre * let &backupext='@'.substitute(substitute(substitute(expand('%:p:h'), '/', '%', 'g'), '\', '%', 'g'), ':', '', 'g')
