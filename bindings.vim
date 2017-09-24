@@ -20,12 +20,12 @@
 
 
 " Quickly edit/reload the vimrc  {{{
-nmap <silent> <leader>vm :tabe ~/.config/nvim/vimmisc<CR>
-nmap <silent> <leader>vs :tabe ~/.config/nvim/vimsettings<CR>
-nmap <silent> <leader>vb :tabe ~/.config/nvim/vimbindings<CR>
-nmap <silent> <leader>va :tabe ~/.config/nvim/vimabbreviation<CR>
-nmap <silent> <leader>vi :tabe ~/.config/nvim/init.vim<CR>
-nmap <silent> <leader>sv :so ~/.config/nvim/init.vim<CR>
+nmap <silent> <leader>vm :tabe $VIMDIR/misc.vim<CR>
+nmap <silent> <leader>vs :tabe $VIMDIR/settings.vim<CR>
+nmap <silent> <leader>vb :tabe $VIMDIR/bindings.vim<CR>
+nmap <silent> <leader>va :tabe $VIMDIR/abbreviation.vim<CR>
+nmap <silent> <leader>vi :tabe $VIMDIR/init.vim<CR>
+nmap <silent> <leader>sv :so   $VIMDIR/init.vim<CR>
 " }}}
 "
 nmap <silent> <leader>e :call fzf#run(fzf#wrap({'source':'ag -g "" ~/.config/nvim/'}))<CR>

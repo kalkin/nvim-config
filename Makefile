@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := about
 XDG_CONFIG_HOME ?= $(HOME)/.config
-TARGET_DIR 	= $(XDG_CONFIG_HOME)/nvim
+TARGET_DIR 	= $(XDG_CONFIG_HOME)/vim
 VIM_FILES 	= $(wildcard *.vim) \
 		  $(wildcard autoload/*.vim) \
 		  $(wildcard ftdetect/*.vim) \
@@ -9,8 +9,11 @@ VIM_FILES 	= $(wildcard *.vim) \
 		  $(wildcard spell/*) \
 		  $(wildcard syntax/*.vim)
 
-TARGETS 	= $(addprefix $(TARGET_DIR)/,$(VIM_FILES))
+TARGETS 	= $(addprefix $(TARGET_DIR)/,$(VIM_FILES)) $(HOME)/.vimrc
 
+
+$(HOME)/.vimrc: vimrc
+	install $< $@
 
 $(TARGET_DIR)/%.vim: %.vim
 	mkdir -p $(@D)

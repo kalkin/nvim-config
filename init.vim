@@ -6,7 +6,15 @@
 " This file just sources my configuration files. 
 "
 " }}}
-call plug#begin('~/.config/nvim/bundle')
+
+if has('nvim')
+    let $VIMDIR = $XDG_CONFIG_HOME.'/vim'
+else
+    let $VIMDIR = $XDG_CONFIG_HOME.'/vim'
+end
+
+
+call plug#begin($VIMDIR.'/bundle')
     Plug 'airblade/vim-gitgutter'
     Plug 'fisadev/vim-isort'
     Plug 'icymind/NeoSolarized'
@@ -23,10 +31,10 @@ call plug#begin('~/.config/nvim/bundle')
     Plug 'xolox/vim-misc'
     Plug 'zah/nim.vim'
 call plug#end()
-source ~/.config/nvim/settings.vim
-source ~/.config/nvim/functions.vim
-source ~/.config/nvim/misc.vim
-source ~/.config/nvim/autocmd.vim
-source ~/.config/nvim/abbreviation.vim
-source ~/.config/nvim/bindings.vim
+source $VIMDIR/settings.vim
+source $VIMDIR/functions.vim
+source $VIMDIR/misc.vim
+source $VIMDIR/autocmd.vim
+source $VIMDIR/abbreviation.vim
+source $VIMDIR/bindings.vim
 
