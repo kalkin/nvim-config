@@ -16,12 +16,10 @@ $(HOME)/.vimrc: vimrc
 	install $< $@
 
 $(TARGET_DIR)/%.vim: %.vim
-	mkdir -p $(@D)
-	cp $< $(@D)
+	install -D $< $@
 
 $(TARGET_DIR)/spell/%: spell/%
-	mkdir -p $(@D)
-	cp $< $(@D)
+	install -D $< $@
 
 install: $(TARGETS)
 	$(info $<)
