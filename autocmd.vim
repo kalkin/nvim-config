@@ -20,7 +20,6 @@ au vimrc BufWinLeave *.* mkview
 au vimrc BufWinEnter *.* silent! loadview
 
 au vimrc VimResized * wincmd = " Autoresize windows on terminal size changes
-au vimrc BufWritePost * Neomake
 
 
 " Let's be friendly :)

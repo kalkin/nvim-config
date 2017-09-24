@@ -18,6 +18,8 @@ let g:mapleader=' '
 " Needed for loading own snippets and not the snipmate snippets
 let g:snippets_dir='~/.vim/snippets'
 
+" Ale open location list if there're errors
+let g:ale_open_list = 1
 
 set foldtext=NeatFoldText()
 

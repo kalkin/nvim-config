@@ -12,7 +12,7 @@ call plug#begin('~/.config/nvim/bundle')
     Plug 'fisadev/vim-isort'
     Plug 'icymind/NeoSolarized'
     Plug 'mhinz/vim-grepper'
-    Plug 'neomake/neomake'
+    Plug 'w0rp/ale'
     Plug 'niklasl/vim-rdf'
     Plug 'vim-perl/vim-perl6'
     Plug 'scrooloose/nerdcommenter'
