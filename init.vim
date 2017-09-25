@@ -8,6 +8,7 @@
 " }}}
 call plug#begin('~/.config/nvim/bundle')
     Plug 'airblade/vim-gitgutter'
+    Plug 'chrisbra/NrrwRgn'
     Plug 'fisadev/vim-isort'
     Plug 'icymind/NeoSolarized'
     Plug 'jceb/vim-orgmode'
