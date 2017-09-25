@@ -18,6 +18,10 @@ let g:mapleader=' '
 " Needed for loading own snippets and not the snipmate snippets
 let g:snippets_dir='~/.vim/snippets'
 
+" vim-orgmode
+let g:org_agenda_files = ['~/Documents/*.org']
+let g:org_todo_keywards = [ 'TODO(t)', '|', 'DONE(d/!)', 'CANCEL(c@)' ]
+
 " Ale open location list if there're errors
 let g:ale_open_list = 1
 
