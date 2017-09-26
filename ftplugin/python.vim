@@ -26,4 +26,7 @@ map <buffer> <C-w>] :vsplit<CR>:call jedi#goto()<CR>
 nmap <buffer> <silent> <leader><Return> :Isort <CR> :YapfFullFormat<CR>
 vmap <buffer> <silent> <leader><Return>  :YapfFormat<CR>
 
+
+" isrot use python3
+let g:vim_isort_python_version = 'python3'
 " vim: fdm=indent tw=0
