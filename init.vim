@@ -9,6 +9,7 @@
 call plug#begin('~/.config/nvim/bundle')
     Plug 'airblade/vim-gitgutter'
     Plug 'chrisbra/NrrwRgn'
+    Plug 'davidhalter/jedi-vim'
     Plug 'fisadev/vim-isort'
     Plug 'icymind/NeoSolarized'
     Plug 'jceb/vim-orgmode'
