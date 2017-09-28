@@ -24,7 +24,7 @@ $(TARGET_DIR)/spell/%: spell/%
 install: $(TARGETS)
 	python3 -c 'import yapf' || pip3 install yapf --user
 	python3 -c 'import jedi' || pip3 install jedi --user
-	python3 -c 'import vint' || pip3 install vint --user
+	python3 -c 'import vint' || pip3 install vim-vint --user
 	python3 -c 'import proselint' || pip3 install proselint --user
 	python3 -c 'import isort' || pip3 install isort --user
 	python3 -c 'import yamllint' || pip3 install yamllint --user
