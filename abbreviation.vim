@@ -1,3 +1,4 @@
+:scriptencoding utf-8
 " Information 
 " {{{
 " vim:foldmarker={{{,}}} tw=80 ft=vim
