@@ -50,4 +50,4 @@ augroup HiglightTODO
 augroup END
 
 " Set airline theme
-> let g:airline_theme='dark'
+let g:airline_theme='dark'
