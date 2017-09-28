@@ -29,4 +29,7 @@ vmap <buffer> <silent> <leader><Return>  :YapfFormat<CR>
 
 " isrot use python3
 let g:vim_isort_python_version = 'python3'
+
+" Set jedi verson
+let g:jedi#force_py_version=3
 " vim: fdm=indent tw=0
