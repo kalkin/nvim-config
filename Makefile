@@ -27,6 +27,7 @@ install: $(TARGETS)
 	python3 -c 'import vint' || pip3 install vint --user
 	python3 -c 'import proselint' || pip3 install proselint --user
 	python3 -c 'import isort' || pip3 install isort --user
+	python3 -c 'import yamllint' || pip3 install yamllint --user
 
 about:
 	@echo "Install with make install"

@@ -26,6 +26,7 @@ The makefile will install the dependencies via pip3
 - *isort* utility to sort Python imports
 - *vint* Vim script language linter
 - *proselint* linter for English prose
+- *yamllint* linter for YAML
 
 ## Configuration Structure
 
