@@ -13,11 +13,11 @@ configuration was originally based on [strcat
 git clone --depth=1 https://github.com/kalkin/vim-config.git
 
 make install
-
-pip install yapf isort jedi vint proselint
 ```
 
 ## Dependencies
+
+The makefile will install the dependencies via pip3
 
 - *git*
 - *Python3*
