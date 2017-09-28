@@ -16,6 +16,7 @@ end
 
 call plug#begin($VIMDIR.'/bundle')
     Plug 'airblade/vim-gitgutter'
+    Plug 'bennyyip/vim-yapf'
     Plug 'chrisbra/NrrwRgn'
     Plug 'davidhalter/jedi-vim'
     Plug 'fisadev/vim-isort'
