@@ -48,3 +48,6 @@ let g:undotree_SetFocusWhenToggle = 1
 augroup HiglightTODO
     autocmd Syntax * call matchadd('Todo',  '\W\zs\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)')
 augroup END
+
+" Set airline theme
+> let g:airline_theme='dark'
