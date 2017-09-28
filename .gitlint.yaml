@@ -1,0 +1,8 @@
+# https://github.com/sk-/git-lint config
+---
+vim:
+  extensions:
+    - .vim
+  command: vint
+  filter: "{filename}:(?P<line>\\d+):(?P<column>\\d+): (?P<message>.+)"
+  installation: "Run pip install vim-vint"
