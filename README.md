@@ -1,10 +1,9 @@
-# NeoVim & Vim Configuration
+# NeoVim Configuration
 
 ## About
 
-My Vim configuration uses [vim-plug](https://github.com/junegunn/vim-plug) to
-manage Vim plugins. It works with NeoVim & and the original Vim. This
-configuration was originally based on [strcat
+My NeoVim configuration uses [vim-plug](https://github.com/junegunn/vim-plug) to
+manage Vim plugins. This configuration was originally based on [strcat
 ](http://github.com/strcat/dotfiles)'s Vim configuration.
 
 ## Installation
@@ -30,16 +29,14 @@ The makefile will install the dependencies via pip3
 
 ## Configuration Structure
 
-The file `~/.vimrc` configures vim config directory to be in `$XDG_CONFIG_HOME`
-and loads `$XDG_CONFIG_HOME/vim/init.vim`. `init.vim` bootstraps the rest of the
-config. All plugins are installed into bundle/ directory, from where they are
-loaded by pathogen.
+`$XDG_CONFIG_HOME/vim/init.vim` bootstraps the rest of the config. All plugins
+are installed into bundle/ directory, from where they are loaded by pathogen.
 
 ### Files Structure
 
 Lines starting with a double quotation mark (") are comments. Furthermore, a
 double quotation mark within the line starts a comment unless it is preceded
-by a backslash (\") and ended by another. Vim allows to give special characters
+by a backslash (\") and ended by another. NeoVim allows to give special characters
 by writing them in a special notation. The notation encloses descriptive words
 in angle brackets (<>). Read all about it with ":help <>".
 
@@ -56,7 +53,7 @@ The characters you will most often are
 By default `$XDG_CONFIG_HOME` is set to `~/.config`.
 
 ```
-~/.config/vim/
+~/.config/nvim/
   ├──╼ autoload/     # Contains symlink to pathogen
   ├──╼ bundle/       # Contains all installed plugins
   ├──╼ colors/       # Color scheme files
@@ -66,7 +63,7 @@ By default `$XDG_CONFIG_HOME` is set to `~/.config`.
   └──╼ vim-plug/     # Contains vim-plug autoload script
 ```
 
-## Learn VIM
+## Learn NeoVim
 
 - run `vimtutor` from your Unix/Linux-prompt and go through it
 - If you need help understanding some setting in my config files press K over a
@@ -88,7 +85,7 @@ Try the documentation :help your\_keyword:
 
 ### Websites
 
-- [Vim-Homepage](http://www.vim.org/)
+- [Vim-Homepage](http://www.neovim.io/)
 - [Vim tips Wiki](http://vim.wikia.com/)
 - [Sven's Vim Page](http://www.guckes.net/vim/)
 - [VI Lover's Homepage](http://www.thomer.com/vi/vi.html)
