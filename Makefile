@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := about
 XDG_CONFIG_HOME ?= $(HOME)/.config
-TARGET_DIR 	= $(XDG_CONFIG_HOME)/vim
+TARGET_DIR 	= $(XDG_CONFIG_HOME)/nvim
 VIM_FILES 	= $(wildcard *.vim) \
 		  $(wildcard autoload/*.vim) \
 		  $(wildcard ftdetect/*.vim) \
