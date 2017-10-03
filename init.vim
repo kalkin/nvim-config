@@ -7,8 +7,16 @@
 "
 " }}}
 
+if empty($XDG_CACHE_HOME)
+  let $XDG_CACHE_HOME = $HOME.'/.cache'
+endif
+if empty($XDG_CONFIG_HOME)
+  let $XDG_CONFIG_HOME = $HOME.'/.config'
+endif
+
+
 if has('nvim')
-    let $VIMDIR = $XDG_CONFIG_HOME.'/vim'
+    let $VIMDIR = $XDG_CONFIG_HOME.'/nvim'
 else
     let $VIMDIR = $XDG_CONFIG_HOME.'/vim'
 end
