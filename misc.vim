@@ -25,6 +25,9 @@ let g:org_todo_keywards = [ 'TODO(t)', '|', 'DONE(d/!)', 'CANCEL(c@)' ]
 " Ale configration
 " Ale open location list if there're errors
 let g:ale_open_list = 1
+let g:ale_pattern_options = {
+\   '/usr/libexec/git-core/.*$': { 'ale_enabled': 0}
+\}
 
 " The rpmlint linter is disabled by default, because running rpmlint can result
 " in the execution of code embedded in the spec file and rpmlint makes no
