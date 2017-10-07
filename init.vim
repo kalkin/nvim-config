@@ -43,7 +43,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'w0rp/ale', { 'tag' : 'v1.4.1' }
     Plug 'xolox/vim-lua-ftplugin'
     Plug 'xolox/vim-misc'
-    Plug 'zah/nim.vim'
+    Plug 'zah/nim.vim', { 'branch': 'master' }
 call plug#end()
 source $VIMDIR/fzf.vim
 source $VIMDIR/settings.vim
