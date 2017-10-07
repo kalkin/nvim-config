@@ -1,3 +1,4 @@
+scriptencoding utf-8
 let g:markers = { '{' : '}' , '[' : ']' , '"' : '"', "'" : "'"}
 let s:state = {'cur': 'none'}
 let s:level = 0
@@ -79,8 +80,8 @@ function! PerfectFold(lnum)
     endif
 endfunction
 
-set foldmethod=expr
-set foldexpr=PerfectFold(v:lnum)
+"set foldmethod=expr
+"set foldexpr=PerfectFold(v:lnum)
 
 function! CleanLine(line)
     return a:line
