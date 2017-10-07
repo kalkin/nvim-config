@@ -32,60 +32,9 @@ nmap <silent> <leader>e :call fzf#run(fzf#wrap({'source':'ag -g "" ~/.config/nvi
 nmap <silent> <leader>o :call fzf#run(fzf#wrap({'source':'ag -g ""'}))<CR>
 nmap \ "_
 
-function! s:buflist()
-	redir => ls
-	silent ls
-	redir END
-	return split(ls, '\n')
-endfunction
-
-function! s:bufopen(e)
-	execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
-
-nnoremap <silent> <Leader>b :call fzf#run({
-			\   'source':  reverse(<sid>buflist()),
-			\   'sink':    function('<sid>bufopen'),
-			\   'options': '+m',
-			\   'down':    len(<sid>buflist()) + 2
-			\ })<CR>
-
-command! FZFMru call fzf#run({
-            \  'source':  v:oldfiles,
-            \  'sink':    'e',
-            \  'options': '-m -x +s',
-            \  'down':    '40%'})
-
-function! s:tags_sink(line)
-	let parts = split(a:line, '\t\zs')
-	let excmd = matchstr(parts[2:], '^.*\ze;"\t')
-	execute 'silent e' parts[1][:-2]
-	let [magic, &magic] = [&magic, 0]
-	execute excmd
-	let &magic = magic
-endfunction
-
-function! s:tags()
-	if empty(tagfiles())
-		echohl WarningMsg
-		echom 'Preparing tags'
-		echohl None
-		call system('ctags -R')
-	endif
-
-	call fzf#run({
-				\ 'source':  'cat '.join(map(tagfiles(), 'fnamemodify(v:val, ":S")')).
-				\            '| grep -v -a ^!',
-				\ 'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
-				\ 'down':    '40%',
-				\ 'sink':    function('s:tags_sink')})
-endfunction
-
-command! Tags call s:tags()
-
-nmap <silent> <leader>m :FZFMru<CR>
+nmap <silent> <leader>b :Buffers<CR>
 nmap <silent> <leader>t :Tags<CR>
-nmap <silent> <leader>s :Yanks<CR>
+"nmap <silent> <leader>s :Yanks<CR>
 nmap <silent> <leader>q :bd<CR>
 nmap <silent> <leader>u :UndotreeToggle<CR>
 nmap <silent> <leader>ln :lnext<CR>
