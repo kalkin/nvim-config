@@ -133,4 +133,6 @@ let g:grepper = {'tools':     ['ag', 'git']}
 
 nmap g= g+
 
+tnoremap <Esc> <C-\><C-n>
+
 inoremap <expr>  <C-K>   HUDG_GetDigraph()  
