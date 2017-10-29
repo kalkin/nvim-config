@@ -40,7 +40,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'tpope/vim-surround'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-perl/vim-perl6'
-    Plug 'w0rp/ale', { 'tag' : 'v1.4.1' }
+    Plug 'w0rp/ale'
     Plug 'xolox/vim-lua-ftplugin'
     Plug 'xolox/vim-misc'
     Plug 'zah/nim.vim', { 'branch': 'master' }
