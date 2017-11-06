@@ -26,6 +26,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'airblade/vim-gitgutter'
     Plug 'bennyyip/vim-yapf'
     Plug 'chrisbra/NrrwRgn'
+    Plug 'Chiel92/vim-autoformat'
     Plug 'davidhalter/jedi-vim'
     Plug 'fisadev/vim-isort'
     Plug 'icymind/NeoSolarized'

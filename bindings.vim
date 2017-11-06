@@ -26,6 +26,7 @@ nmap <silent> <leader>vb :tabe $VIMDIR/bindings.vim<CR>
 nmap <silent> <leader>va :tabe $VIMDIR/abbreviation.vim<CR>
 nmap <silent> <leader>vi :tabe $VIMDIR/init.vim<CR>
 nmap <silent> <leader>sv :so   $VIMDIR/init.vim<CR>
+nmap <silent> <leader><Return> :Autoformat<CR>
 " }}}
 "
 nmap <silent> <leader>e :call fzf#run(fzf#wrap({'source':'ag -g "" ~/.config/nvim/'}))<CR>
@@ -133,6 +134,6 @@ let g:grepper = {'tools':     ['ag', 'git']}
 
 nmap g= g+
 
-tnoremap <Esc> <C-\><C-n>
+noremap <Esc> <C-\><C-n>
 
 inoremap <expr>  <C-K>   HUDG_GetDigraph()  
