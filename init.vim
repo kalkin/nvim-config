@@ -35,6 +35,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf'
     Plug 'scrooloose/nerdcommenter'
+    Plug 'thirtythreeforty/lessspace.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-speeddating'
