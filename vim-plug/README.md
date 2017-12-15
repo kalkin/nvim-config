@@ -10,7 +10,7 @@ A minimalist Vim plugin manager.
 - Easier to setup: Single file. No boilerplate code required.
 - Easier to use: Concise, intuitive syntax
 - [Super-fast][40/4] parallel installation/update
-  (with any of `+python`, `+python3`, `+ruby`, or [Neovim][nv])
+  (with any of `+job`, `+python`, `+python3`, `+ruby`, or [Neovim][nv])
 - Creates shallow clones to minimize disk space usage and download time
 - On-demand loading for [faster startup time][startup-time]
 - Can review and rollback updates
@@ -20,12 +20,14 @@ A minimalist Vim plugin manager.
 
 [40/4]: https://raw.githubusercontent.com/junegunn/i/master/vim-plug/40-in-4.gif
 [nv]: http://neovim.org/
-[startup-time]: http://junegunn.kr/images/vim-startup-time.png
+[startup-time]: https://github.com/junegunn/vim-startuptime-benchmark#result
 
 ### Installation
 
 [Download plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)
 and put it in the "autoload" directory.
+
+#### Vim
 
 ###### Unix
 
@@ -34,27 +36,55 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-###### Neovim
+You can automate the process by putting the command in your Vim configuration
+file as suggested [here][auto].
 
-```sh
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
+[auto]: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 
 ###### Windows (PowerShell)
 
 ```powershell
 md ~\vimfiles\autoload
 $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-(New-Object Net.WebClient).DownloadFile($uri, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath("~\vimfiles\autoload\plug.vim"))
+(New-Object Net.WebClient).DownloadFile(
+  $uri,
+  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+    "~\vimfiles\autoload\plug.vim"
+  )
+)
+```
+
+#### Neovim
+
+###### Unix
+
+```sh
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+###### Windows (PowerShell)
+
+```powershell
+md ~\AppData\Local\nvim\autoload
+$uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+(New-Object Net.WebClient).DownloadFile(
+  $uri,
+  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+    "~\AppData\Local\nvim\autoload\plug.vim"
+  )
+)
 ```
 
 ### Getting Help
 
-- See the [requirements] page for debugging information & tested configurations.
-- See the [FAQ] for common problems and questions.
-- Create an [issue](https://github.com/junegunn/vim-plug/issues/new).
+- See [tutorial] page to learn the basics of vim-plug
+- See [tips] and [FAQ] pages for common problems and questions
+- See [requirements] page for debugging information & tested configurations
+- Create an [issue](https://github.com/junegunn/vim-plug/issues/new)
 
+[tutorial]: https://github.com/junegunn/vim-plug/wiki/tutorial
+[tips]: https://github.com/junegunn/vim-plug/wiki/tips
 [FAQ]: https://github.com/junegunn/vim-plug/wiki/faq
 [requirements]: https://github.com/junegunn/vim-plug/wiki/requirements
 
@@ -65,10 +95,15 @@ Add a vim-plug section to your `~/.vimrc` (or `~/.config/nvim/init.vim` for Neov
 1. Begin the section with `call plug#begin()`
 1. List the plugins with `Plug` commands
 1. `call plug#end()` to update `&runtimepath` and initialize plugin system
+    - Automatically executes `filetype plugin indent on` and `syntax enable`.
+      You can revert the settings after the call. e.g. `filetype indent off`, `syntax off`, etc.
 
 #### Example
 
 ```vim
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -79,7 +114,7 @@ Plug 'junegunn/vim-easy-align'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-" Group dependencies, vim-snippets depends on ultisnips
+" Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
@@ -101,7 +136,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
-" Add plugins to &runtimepath
+" Initialize plugin system
 call plug#end()
 ```
 
