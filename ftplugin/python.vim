@@ -23,8 +23,8 @@ map <buffer> <C-]> :call jedi#goto()<CR>
 map <buffer> <C-w>] :vsplit<CR>:call jedi#goto()<CR>
 
 
-nmap <buffer> <silent> <leader><Return> :Isort <CR> :YapfFullFormat<CR>
-vmap <buffer> <silent> <leader><Return>  :YapfFormat<CR>
+nmap <buffer> <silent> <leader><Return> :Isort <CR> :Yapf<CR>
+vmap <buffer> <silent> <leader><Return>  :Yapf<CR>
 
 
 " isrot use python3
