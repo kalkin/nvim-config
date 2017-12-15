@@ -41,7 +41,7 @@ nmap <silent> <leader>u :UndotreeToggle<CR>
 nmap <silent> <leader>ln :lnext<CR>
 nmap <silent> <leader>lp :lprev<CR>
 
-nmap <silent> <leader>f :Files<CR>
+nmap <silent> <leader>f :GFiles<CR>
 
 
 " C-\ - Open the definition in a new tab
