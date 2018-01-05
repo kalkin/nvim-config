@@ -30,7 +30,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'davidhalter/jedi-vim'
     Plug 'fisadev/vim-isort'
     Plug 'icymind/NeoSolarized'
-    Plug 'jceb/vim-orgmode'
     Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf'
