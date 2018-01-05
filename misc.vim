@@ -15,14 +15,7 @@ colorscheme NeoSolarized
 
 let g:mapleader=' '
 
-" Needed for loading own snippets and not the snipmate snippets
-let g:snippets_dir='~/.vim/snippets'
-
-" vim-orgmode
-let g:org_agenda_files = ['~/Documents/*.org']
-let g:org_todo_keywards = [ 'TODO(t)', '|', 'DONE(d/!)', 'CANCEL(c@)' ]
-
-" Ale configration
+" Ale configuration
 " Ale open location list if there're errors
 let g:ale_open_list = 1
 let g:ale_pattern_options = {
@@ -45,12 +38,6 @@ augroup END
 
 set foldtext=NeatFoldText()
 
-let g:undotree_SplitWidth = 40
-let g:undotree_SetFocusWhenToggle = 1
-
 augroup HiglightTODO
     autocmd Syntax * call matchadd('Todo',  '\W\zs\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)')
 augroup END
-
-" Set airline theme
-let g:airline_theme='dark'
