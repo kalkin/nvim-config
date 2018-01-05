@@ -335,6 +335,8 @@ set sts=4
 " [buffer] |'spelllang| Language(s) to do spell checking for
 set spelllang =en,de_20
 
+set spell
+
 " [global] |'splitbelow'| New window from split is below the current one
 set sb
 

@@ -60,9 +60,6 @@ map <F1>  :help
 " paste mode
 :map <F4> :set invpaste<CR><Bar>:echo "Paste Mode: " . strpart("OffOn", 3 * &paste, 3)<CR>
 
-" Toggle spell checking between en_us and de_20 (new spelling
-:map <F7> :if 1 == &spell \| set nospell \| else \| set spell \| endif \|<CR>
-
 imap <F2> <Esc><F2>i
 imap <F3> <Esc><F3>i
 imap <F4> <Esc><F4>i
