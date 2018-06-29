@@ -32,6 +32,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
+    Plug 'lifepillar/pgsql.vim'
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf'
     Plug 'rust-lang/rust.vim', { 'for': 'rust', 'do': 'cargo install rls rustfmt' }
