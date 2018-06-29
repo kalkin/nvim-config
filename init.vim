@@ -36,6 +36,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'lifepillar/pgsql.vim'
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf'
+    Plug 'pearofducks/ansible-vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-repeat'
