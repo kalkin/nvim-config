@@ -35,7 +35,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'lifepillar/pgsql.vim'
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf'
-    Plug 'rust-lang/rust.vim', { 'for': 'rust', 'do': 'cargo install rls rustfmt' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-repeat'
