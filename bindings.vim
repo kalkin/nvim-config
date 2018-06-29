@@ -20,21 +20,25 @@
 
 
 " Quickly edit/reload the vimrc  {{{
-nmap <silent> <leader>vm :tabe $VIMDIR/misc.vim<CR>
-nmap <silent> <leader>vs :tabe $VIMDIR/settings.vim<CR>
-nmap <silent> <leader>vb :tabe $VIMDIR/bindings.vim<CR>
-nmap <silent> <leader>va :tabe $VIMDIR/abbreviation.vim<CR>
-nmap <silent> <leader>vi :tabe $VIMDIR/init.vim<CR>
 nmap <silent> <leader>sv :so   $VIMDIR/init.vim<CR>
 nmap <silent> <leader><Return> :Autoformat<CR>
 " }}}
 "
 nmap <silent> <leader>e :call fzf#run(fzf#wrap({'source':'ag -g "" ~/.config/nvim/'}))<CR>
-nmap <silent> <leader>o :call fzf#run(fzf#wrap({'source':'ag -g ""'}))<CR>
+nmap <silent> <leader>o :Files<CR>
 nmap \ "_
 
+
+command! -bang VimConfig call fzf#run(fzf#wrap({'source': "ag --ignore-dir bundle '' -l ~/.config/nvim/"}))
+command! -bang ZshConfig call fzf#run(fzf#wrap({'source': "ag --ignore-dir bundle '' -l ~/.config/zsh/"}))
+
 nmap <silent> <leader>b :Buffers<CR>
+nmap <silent> <leader>g :Ag
+nmap <silent> <leader>h :Helptags<CR>
 nmap <silent> <leader>t :Tags<CR>
+nmap <silent> <leader>v :VimConfig <CR>
+nmap <silent> <leader>z :ZshConfig <CR>
+
 nmap <silent> <leader>q :bd<CR>
 nmap <silent> <leader>ln :lnext<CR>
 nmap <silent> <leader>lp :lprev<CR>
@@ -50,8 +54,7 @@ map QQ :qall!<CR>
 " Unmap Ex-Mode
 :map Q <Nop>
 
-noremap <S-F12> :lclose<CR>
-noremap <F12>  :lopen<CR>
+noremap <F12>  :ALEToggle<CR>
 map <F1>  :help 
 
 " toggle highlight search (folke)
