@@ -29,6 +29,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'Chiel92/vim-autoformat'
     Plug 'davidhalter/jedi-vim'
     Plug 'fisadev/vim-isort'
+    Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-grepper'
