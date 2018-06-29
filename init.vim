@@ -23,10 +23,11 @@ end
 
 
 call plug#begin($VIMDIR.'/bundle')
+    Plug 'Chiel92/vim-autoformat'
     Plug 'airblade/vim-gitgutter'
     Plug 'bennyyip/vim-yapf'
     Plug 'chrisbra/NrrwRgn'
-    Plug 'Chiel92/vim-autoformat'
+    Plug 'dahu/vim-lotr'
     Plug 'davidhalter/jedi-vim'
     Plug 'fisadev/vim-isort'
     Plug 'godlygeek/tabular'
