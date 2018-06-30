@@ -42,7 +42,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-speeddating'
     Plug 'tpope/vim-surround'
-    Plug 'vim-airline/vim-airline'
     Plug 'vim-perl/vim-perl6'
     Plug 'w0rp/ale'
     Plug 'xolox/vim-lua-ftplugin'
