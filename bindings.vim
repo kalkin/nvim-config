@@ -24,7 +24,6 @@ nmap <silent> <leader>sv :so   $VIMDIR/init.vim<CR>
 nmap <silent> <leader><Return> :Autoformat<CR>
 " }}}
 "
-nmap <silent> <leader>e :call fzf#run(fzf#wrap({'source':'ag -g "" ~/.config/nvim/'}))<CR>
 nmap <silent> <leader>o :Files<CR>
 nmap \ "_
 
