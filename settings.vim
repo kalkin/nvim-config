@@ -384,6 +384,7 @@ if has('persistent_undo')
     " enable autowrite and persistent undo
     set aw
     set undolevels=5000
+    set undofile
 endif
 
 " }}}
