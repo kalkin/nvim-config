@@ -59,13 +59,6 @@ imap <F10> <Esc><F10>i
 imap <F11> <Esc><F11>i
 imap <F12> <Esc><F12>i
 
-
-" Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
 " Call sudo
 cmap w!! w !sudo tee % >/dev/null
 
