@@ -48,7 +48,7 @@ if maparg('N','n') == ""
 endif
 
 " Default highlighting for next match...
-highlight default HLNext ctermfg=white ctermbg=red
+highlight default HLNext cterm=bold ctermfg=3 gui=bold guifg=#b58900
 
 
 "====[ IMPLEMENTATION ]=======================================
