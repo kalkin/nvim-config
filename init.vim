@@ -25,28 +25,28 @@ end
 call plug#begin($VIMDIR.'/bundle')
     Plug 'Chiel92/vim-autoformat'
     Plug 'airblade/vim-gitgutter'
-    Plug 'bennyyip/vim-yapf'
+    Plug 'bennyyip/vim-yapf', { 'for': 'python' }
     Plug 'chrisbra/NrrwRgn'
     Plug 'dahu/vim-lotr'
-    Plug 'davidhalter/jedi-vim'
-    Plug 'fisadev/vim-isort'
+    Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+    Plug 'fisadev/vim-isort', { 'for': 'python' }
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
-    Plug 'lifepillar/pgsql.vim'
+    Plug 'lifepillar/pgsql.vim', { 'for': 'sql' }
     Plug 'mhinz/vim-grepper'
-    Plug 'niklasl/vim-rdf'
-    Plug 'pearofducks/ansible-vim'
+    Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
+    Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-speeddating'
     Plug 'tpope/vim-surround'
-    Plug 'vim-perl/vim-perl6'
+    Plug 'vim-perl/vim-perl6', { 'for': 'perl6' }
     Plug 'w0rp/ale'
-    Plug 'xolox/vim-lua-ftplugin'
-    Plug 'xolox/vim-misc'
-    Plug 'zah/nim.vim', { 'branch': 'master' }
+    Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
+    Plug 'xolox/vim-misc', { 'for': 'lua' }
+    Plug 'zah/nim.vim', { 'branch': 'master', 'for': 'nim' }
 call plug#end()
 source $VIMDIR/settings.vim
 source $VIMDIR/misc.vim
