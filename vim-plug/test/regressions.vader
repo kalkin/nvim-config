@@ -315,7 +315,7 @@ Execute (#489/#587 On-demand loading with 'on' option should trigger BufRead aut
   call plug#end()
 
   tabnew a.java
-  call setline(1, '// vim: set filetype=lava:')
+  call setline(1, '// vim: filetype=lava:')
   redir => out
   silent! XXX
   redir END
