@@ -48,7 +48,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'xolox/vim-misc'
     Plug 'zah/nim.vim', { 'branch': 'master' }
 call plug#end()
-source $VIMDIR/fzf.vim
 source $VIMDIR/settings.vim
 source $VIMDIR/functions.vim
 source $VIMDIR/misc.vim
