@@ -25,11 +25,11 @@ end
 call plug#begin($VIMDIR.'/bundle')
     Plug 'Chiel92/vim-autoformat'
     Plug 'airblade/vim-gitgutter'
-    Plug 'bennyyip/vim-yapf', { 'for': 'python' }
+    Plug 'bennyyip/vim-yapf', { 'for': 'python' , 'do': 'pip3 install yapf --user --upgrade'}
     Plug 'chrisbra/NrrwRgn'
     Plug 'dahu/vim-lotr'
-    Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-    Plug 'fisadev/vim-isort', { 'for': 'python' }
+    Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip3 install jedi --user --upgrade' }
+    Plug 'fisadev/vim-isort', { 'for': 'python', 'do': 'pip3 install isort --user --upgrade' }
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
@@ -43,7 +43,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'tpope/vim-speeddating'
     Plug 'tpope/vim-surround'
     Plug 'vim-perl/vim-perl6', { 'for': 'perl6' }
-    Plug 'w0rp/ale'
+    Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
     Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
     Plug 'xolox/vim-misc', { 'for': 'lua' }
     Plug 'zah/nim.vim', { 'branch': 'master', 'for': 'nim' }
