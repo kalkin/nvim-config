@@ -24,26 +24,11 @@ nmap <silent> <leader>sv :so   $VIMDIR/init.vim<CR>
 nmap <silent> <leader><Return> :Autoformat<CR>
 " }}}
 "
-nmap <silent> <leader>o :Files<CR>
 nmap \ "_
-
-
-command! -bang VimConfig call fzf#run(fzf#wrap({'source': "ag --ignore-dir bundle '' -l ~/.config/nvim/"}))
-command! -bang ZshConfig call fzf#run(fzf#wrap({'source': "ag --ignore-dir bundle '' -l ~/.config/zsh/"}))
-
-nmap <silent> <leader>b :Buffers<CR>
-nmap <silent> <leader>g :Ag
-nmap <silent> <leader>h :Helptags<CR>
-nmap <silent> <leader>t :Tags<CR>
-nmap <silent> <leader>v :VimConfig <CR>
-nmap <silent> <leader>z :ZshConfig <CR>
 
 nmap <silent> <leader>q :bd<CR>
 nmap <silent> <leader>ln :lnext<CR>
 nmap <silent> <leader>lp :lprev<CR>
-
-nmap <silent> <leader>f :GFiles<CR>
-
 
 " C-\ - Open the definition in a new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
