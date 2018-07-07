@@ -49,7 +49,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'zah/nim.vim', { 'branch': 'master' }
 call plug#end()
 source $VIMDIR/settings.vim
-source $VIMDIR/functions.vim
 source $VIMDIR/misc.vim
 source $VIMDIR/autocmd.vim
 source $VIMDIR/abbreviation.vim

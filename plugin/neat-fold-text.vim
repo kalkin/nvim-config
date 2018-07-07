@@ -12,3 +12,5 @@ function! NeatFoldText()
     return l:foldtextstart . repeat(l:foldchar, 80-l:foldtextlength) . l:lines_count_text
 endfunction
 
+" Use my foldtext() implementation by default
+set foldtext=NeatFoldText()
