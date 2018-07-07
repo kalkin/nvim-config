@@ -29,9 +29,6 @@ set ar
 " Options initiating with [B]
 " {{{
 
-" [global] |'background'| "dark" or "light", used for highlight colors
-set bg=dark 
-
 " [global] |'backspace'| how backspace works at start of line
 set bs=2
 
@@ -59,10 +56,6 @@ set cin
 
 " [global] |'cmdheight'| Disable the 'Press RETURN...' - Messages
 set ch=2
-
-" [global] |'colorcolumn'| is a comma separated list of screen columns that are
-" highlighted with ColorColumn hl-ColorColumn.
-set cc=+1
 
 " [global] |'cmdwinheight'| Fives lines should be enough
 set cwh=5
@@ -112,10 +105,6 @@ set complete+=k
 
 " [buffer] |'confirm'| Ask what to do about unsaved/read-only files
 set cf
-
-" [buffer] |'cursorline'| Highlight the screen line of the cursor
-set cul
-
 " }}}
 
 " Options initiating with [D]
@@ -158,41 +147,6 @@ set fenc=utf-8
 
 set fcs=vert:\|,fold:\ 
 
-
-" [window] |'fdm'| Is folding really evile?
-set foldmethod=marker
-
-" [global] |'foldclose'| when set to all a fold is closed when the cursor isn't
-"  in it
-"set fcl
-
-" [window] |'fmr'| markers used when 'foldmethod' is marker
-set foldmarker={,}
-
-
-set foldlevel=1
-
-" [window] |'foldcolumn'| If n>0 a colum with width n is shown which indicates
-" foldings
-set fdc=0
-
-" [global] |'foldopen'| Specifies for which type of commands folds will be openx
-" ,--------[ Options ]
-" | item    command
-" | all     any
-" | block   "(", "{", "[[", "[{", etc.
-" | hor     horizontal movements: "l", "w", "fx", etc
-" | insert  any command in Insert mode
-" | jump    far jumps: "G", "gg" etc..
-" | mark    jumping to mark
-" | percent "%"
-" | quickfix ":cn", ":crew", ":make" etc
-" | search   search for a pattern "/", "n", "*", "gd"
-" | tag     jumping to a tag
-" | undo    undo or redo
-" `--------
-set fdo=insert,jump,tag,mark,quickfix,search
-
 " }}}
 
 " Options initiating with [G]
@@ -212,9 +166,6 @@ endif
 "
 " Options initiating with [H]
 " {{{
-
-" [global] |'hlsearch'| Simple press <F4> to stop it.
-set hls 
 
 " [global] |'history'| Number of command-lines that are remembered
 set hi=1000

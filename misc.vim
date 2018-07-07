@@ -5,13 +5,9 @@
 " }}}
 
 " Syntax on!
-syntax on
 
 " Filetype plugin on!
 filetype plugin on
-
-set termguicolors
-colorscheme NeoSolarized
 
 let g:mapleader=' '
 
