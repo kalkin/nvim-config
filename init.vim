@@ -43,6 +43,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'tpope/vim-speeddating'
     Plug 'tpope/vim-surround'
     Plug 'vim-perl/vim-perl6', { 'for': 'perl6' }
+    Plug 'vito-c/jq.vim', { 'for': 'jq' }
     Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
     Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
     Plug 'xolox/vim-misc', { 'for': 'lua' }
