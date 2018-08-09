@@ -30,5 +30,4 @@ au vimrc VimLeave * echo "Cya in Hell."
 au vimrc BufNewFile,BufRead *.p6 setf perl6
 
 " Set dictionary to syntax file
-au vimrc FileType * exec('set  dict+='.$VIMRUNTIME.'/syntax/'.getbufvar("%","current_syntax").'.vim')
 
