@@ -26,6 +26,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'Chiel92/vim-autoformat'
     Plug 'airblade/vim-gitgutter'
     Plug 'bennyyip/vim-yapf', { 'for': 'python' , 'do': 'pip3 install yapf --user --upgrade'}
+    Plug 'brandonbloom/vim-factor', { 'for': 'factor' }
     Plug 'chrisbra/NrrwRgn'
     Plug 'dahu/vim-lotr'
     Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip3 install jedi --user --upgrade' }
