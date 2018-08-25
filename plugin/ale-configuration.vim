@@ -2,7 +2,8 @@
 " Ale open location list if there're errors
 let g:ale_open_list = 1
 let g:ale_pattern_options = {
-\   '/usr/libexec/git-core/.*$': { 'ale_enabled': 0}
+\   '.*/.local/lib.*/.*': {'ale_enabled': 0},
+\   '/usr/.*': {'ale_enabled': 0},
 \}
 
 " The rpmlint linter is disabled by default, because running rpmlint can result
