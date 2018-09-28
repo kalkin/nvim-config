@@ -38,7 +38,7 @@ map QQ :qall!<CR>
 " Unmap Ex-Mode
 :map Q <Nop>
 
-noremap <F12>  :ALEToggle<CR>
+noremap <F12>  :ALEToggleBuffer<CR>
 map <F1>  :help 
 
 " toggle highlight search (folke)
