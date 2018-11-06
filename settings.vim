@@ -100,7 +100,7 @@ set cot=menu,preview,longest
 " | ]       tag completion
 " | t       same as \"]\"
 " `--------
-set complete+=k
+set complete+=],k
 
 
 " [buffer] |'confirm'| Ask what to do about unsaved/read-only files
