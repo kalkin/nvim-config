@@ -354,6 +354,6 @@ set wim=list:longest
 
 " [global] |'wildignore'|  A list of file patterns which are ignored on
 " completing files or directories
-set wig=*.o,*.obj,*swp,*.bac,*.class,*.pyc,*.pyo,*.png,*.jpg
+set wig=*.o,*.obj,*swp,*.bac,*.class,*.pyc,*.pyo,*.png,*.jpg,*.ali
 
 " }}}
