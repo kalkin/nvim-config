@@ -354,6 +354,9 @@ set wim=list:longest
 
 " [global] |'wildignore'|  A list of file patterns which are ignored on
 " completing files or directories
-set wig=*.o,*.obj,*swp,*.bac,*.class,*.pyc,*.pyo,*.png,*.jpg,*.ali
+set wig=*.o,*.obj,*swp,*.bac,*.class,*.pyc,*.pyo,*.png,*.jpg,*.ali,*.lexch
+" Ada stuff to ignore
+set wig+=*.ads.stdout,*.ads.stderr,*.adb.stdout,*.adb.stderr,
+set wig+=gnatcheck-source-list.out,*.a
 
 " }}}
