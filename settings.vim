@@ -75,7 +75,7 @@ set clipboard=unnamedplus
 " |             completion in the preview window. 
 " `--------
 "
-set cot=menu,preview,longest
+set cot=menu,menuone,preview,noselect,noinsert
 
 " [buffer] |'complete'| Specify how Insert mode completion works
 "                       Default set to: '.,w,b,u,t,i'
