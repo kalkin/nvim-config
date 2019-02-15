@@ -1,0 +1,4 @@
+[vim-plug]
+    upstream = https://github.com/junegunn/vim-plug
+    follow = @{tags}
+	split = 734d9a11b5
