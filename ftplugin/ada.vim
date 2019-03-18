@@ -20,3 +20,5 @@ let g:NERDDefaultAlign = 'start'
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDAltDelims_ada = 1
+
+let b:ale_enabled = 0
