@@ -32,19 +32,6 @@ set ar
 " [global] |'backspace'| how backspace works at start of line
 set bs=2
 
-" [buffer] |'bufhidden'| what to do when buffer is no longer in window
-" ,--------[ Options ]
-" | <empty>	    follow the global 'hidden' option
-" | hide		hide the buffer (don't unload it), also when 'hidden' is not
-" |             set
-" | unload	    unload the buffer, also when 'hidden' is set or using :hide
-" | delete	    delete the buffer from the buffer list, also when 'hidden' is
-" |             set or using :hide, like using :bdelete
-" | wipe		wipe out the buffer from the buffer list, also when 'hidden'
-" |             is set or using |:hide|, like using :bwipeout
-" `--------
-set bh=hide
-
 " }}}
 
 " Options initiating with [C]
@@ -169,9 +156,6 @@ endif
 
 " [global] |'history'| Number of command-lines that are remembered
 set hi=1000
-
-set hidden
-
 " }}}
 
 " Options initiating with [I]
