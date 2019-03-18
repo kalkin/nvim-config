@@ -59,6 +59,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'xolox/vim-misc', { 'for': 'lua' }
     Plug 'zah/nim.vim', { 'branch': 'master', 'for': 'nim' }
     Plug 'jason0x43/vim-js-indent'
+    Plug 'soli/prolog-vim'
 call plug#end()
 source $VIMDIR/fzf.vim
 source $VIMDIR/settings.vim
