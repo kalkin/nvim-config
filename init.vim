@@ -39,6 +39,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'lervag/vimtex', { 'for': 'tex' }
     Plug 'lifepillar/pgsql.vim', { 'for': 'sql' }
+    Plug 'mbbill/undotree'
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
     Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
