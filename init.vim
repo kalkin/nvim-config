@@ -23,6 +23,7 @@ end
 
 
 call plug#begin($VIMDIR.'/bundle')
+    Plug 'aklt/plantuml-syntax'
     Plug 'arrufat/vala.vim'
     Plug 'Chiel92/vim-autoformat'
     Plug 'airblade/vim-gitgutter'
