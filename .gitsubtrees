@@ -1,0 +1,3 @@
+[vim-plug]
+    upstream = https://github.com/junegunn/vim-plug
+    follow = @{*}
