@@ -15,4 +15,5 @@ let g:NERDAltDelims_ada = 1
 let b:ale_enabled = 1
 let b:ale_linters = ['gcc']
 let b:ale_ada_gnatpp_options = '--insert-blank-lines --based-grouping=4 --par_threshold=3 --call_threshold=3 --decimal-grouping=3 --preserve-blank-lines --comments-unchanged --max-line-length=120'
+let b:ale_ada_gcc_executable= $HOME . '/opt/GNAT/2019/bin/gcc'
 nmap <buffer> <silent> <leader><Return> :ALEFix gnatpp<CR>
