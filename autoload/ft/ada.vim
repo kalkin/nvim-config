@@ -29,6 +29,27 @@ function! s:GnatInspect(gpr, cmd, name, file, line)
     return l:result
 endfunction
 
+" Handle bug in gnatinspect with separate body
+function s:AdjustLineNumber(file)
+    if a:file =~? '.*\.ads$'
+        return 0
+    endif
+    let l:result = 0
+    let l:isSeparate = 0
+    for l:line in readfile(a:file)
+        if l:line =~? '^\s*\(package\|function\|procedure\)'
+            break
+        elseif l:line =~? '^\s*separate'
+            let l:isSeparate = 1
+        endif
+        let l:result = l:result + 1
+    endfor
+    if l:isSeparate == 1
+        return l:result - 1
+    endif
+    return 0
+endfunction
+
 function! ft#ada#GnatGotoTag()
     let l:abs_filepath = fnamemodify(expand('%'), ':p')
     try
@@ -50,6 +71,7 @@ function! ft#ada#GnatGotoTag()
     let parts = split(result[0], ':')
     let l:file = l:parts[1]
     let l:line = l:parts[2]
+    let l:line = l:line + s:AdjustLineNumber(l:file)
     let l:column = l:parts[3]
     execute 'edit' '+'.line file
     call cursor(l:line, l:column)
