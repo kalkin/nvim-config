@@ -209,6 +209,33 @@ function s:FindOrCreateBuffer(fileName, doSplit, findSimilar)
     endif
 endfunction
 
+function! ft#ada#GnatGotoDeclaration()
+    let l:abs_filepath = fnamemodify(expand('%'), ':p')
+    let l:gpr = s:FindGprIn(fnamemodify(l:abs_filepath, ':h'))
+    if l:gpr ==# ''
+        echohl WarningMsg| echo 'Failed to find a gpr file'
+    endif
+    let l:word = expand('<cword>')
+    try
+        let l:result = s:GnatInspect(l:gpr, 'decl', l:word, expand('%'), line('.'))
+    catch /.\+ not found/
+        echohl WarningMsg| echo v:exception
+        return
+    endtry
+    let parts = split(result[0], ':')
+    let l:file = l:parts[1]
+    let l:line = l:parts[2]
+    let l:column = l:parts[3]
+    if l:file !=# l:abs_filepath
+        call s:FindOrCreateBuffer(l:file, '', 1)
+    endif
+    call cursor(l:line, l:column)
+    if expand('<cword>') !=? l:word
+        let l:line = l:line + s:AdjustLineNumber(l:file)
+        call cursor(l:line, l:column)
+    endif
+endfunction
+
 function! ft#ada#GnatGotoTag()
     let l:abs_filepath = fnamemodify(expand('%'), ':p')
     let l:gpr = s:FindGprIn(fnamemodify(l:abs_filepath, ':h'))

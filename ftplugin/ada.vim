@@ -22,5 +22,6 @@ let b:ale_ada_gcc_executable= $HOME . '/opt/GNAT/2019/bin/gcc'
 nmap <buffer> <silent> <leader><Return> :ALEFix gnatpp<CR>
 
 map <buffer> <silent> <C-]> :call ft#ada#GnatGotoTag()<CR>
+map <buffer> <silent> gd :call ft#ada#GnatGotoDeclaration()<CR>
 
 set textwidth=120
