@@ -211,11 +211,10 @@ endfunction
 
 function! ft#ada#GnatGotoTag()
     let l:abs_filepath = fnamemodify(expand('%'), ':p')
-    try
-        let l:gpr = s:FindGprIn(fnamemodify(l:abs_filepath, ':h'))
-    catch
-        echohl WarningMsg| echo v:exception
-    endtry
+    let l:gpr = s:FindGprIn(fnamemodify(l:abs_filepath, ':h'))
+    if l:gpr ==# ''
+        echohl WarningMsg| echo 'Failed to find a gpr file'
+    endif
     let l:word = expand('<cword>')
     try
         let l:result = s:GnatInspect(l:gpr, 'body', l:word, expand('%'), line('.'))
