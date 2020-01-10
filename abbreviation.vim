@@ -11,6 +11,7 @@
 " }}}
 
 ab TDY <C-R>=strftime("%Y-%m-%d")
+ab EPOCH <C-R>=strftime("%s")
 ab Gruss Gruß
 ab Gruesse Grüße
 ab ME Bahtiar `kalkin-` Gadimov <bahtiar@gadimov.de>
