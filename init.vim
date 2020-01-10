@@ -50,7 +50,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'tpope/vim-speeddating'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
-    Plug 'vim-perl/vim-perl6', { 'for': 'perl6' }
+    Plug 'Raku/vim-raku', { 'for': 'raku' }
     Plug 'vim-scripts/taglist.vim'
     Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
     Plug 'autozimu/LanguageClient-neovim', {
