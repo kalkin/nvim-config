@@ -40,6 +40,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'lervag/vimtex', { 'for': 'tex' }
     Plug 'lifepillar/pgsql.vim', { 'for': 'sql' }
     Plug 'mbbill/undotree'
+    Plug 'rickhowe/diffchar.vim'
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
     Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
