@@ -86,3 +86,5 @@ let g:grepper = {'tools':     ['ag', 'git']}
 nmap g= g+
 
 noremap <Esc> <C-\><C-n>
+
+nnoremap <silent> <leader>u :MundoToggle<CR>
