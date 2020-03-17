@@ -44,6 +44,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
     Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
     Plug 'scrooloose/nerdcommenter'
+    Plug 'tarekbecker/vim-yaml-formatter'
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-repeat'
