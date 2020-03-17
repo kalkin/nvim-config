@@ -209,6 +209,18 @@ function s:FindOrCreateBuffer(fileName, doSplit, findSimilar)
     endif
 endfunction
 
+function! s:GotoLocation(word, file, line, column)
+    let l:abs_filepath = fnamemodify(expand('%'), ':p')
+    if a:file !=# l:abs_filepath
+        call s:FindOrCreateBuffer(a:file, '', 1)
+    endif
+    call cursor(a:line, a:column)
+    if expand('<cword>') !=? a:word
+        let l:line = a:line + s:AdjustLineNumber(a:file)
+        call cursor(l:line, a:column)
+    endif
+endfunction
+
 function! ft#ada#GnatGotoDeclaration()
     let l:abs_filepath = fnamemodify(expand('%'), ':p')
     let l:gpr = s:FindGprIn(fnamemodify(l:abs_filepath, ':h'))
@@ -226,14 +238,7 @@ function! ft#ada#GnatGotoDeclaration()
     let l:file = l:parts[1]
     let l:line = l:parts[2]
     let l:column = l:parts[3]
-    if l:file !=# l:abs_filepath
-        call s:FindOrCreateBuffer(l:file, '', 1)
-    endif
-    call cursor(l:line, l:column)
-    if expand('<cword>') !=? l:word
-        let l:line = l:line + s:AdjustLineNumber(l:file)
-        call cursor(l:line, l:column)
-    endif
+    call s:GotoLocation(l:word, l:file, l:line, l:column)
 endfunction
 
 function! ft#ada#GnatGotoTag()
@@ -243,8 +248,20 @@ function! ft#ada#GnatGotoTag()
         echohl WarningMsg| echo 'Failed to find a gpr file'
     endif
     let l:word = expand('<cword>')
+    let l:file = l:abs_filepath
+    let l:line = line('.')
+    let l:column = col('.')
     try
         let l:result = s:GnatInspect(l:gpr, 'body', l:word, expand('%'), line('.'))
+        let l:parts = split(result[0], ':')
+        let l:file = l:parts[1]
+        let l:line = l:parts[2]
+        let l:column = split(l:parts[3], ' ')[0]
+        if (l:file ==# l:abs_filepath && l:line == line('.') && l:column == col('.'))
+            call ft#ada#GnatGotoDeclaration()
+        else
+            call s:GotoLocation(l:word, l:file, l:line, l:column)
+        endif
     catch /.\+ not found/
         try
             let l:result = s:GnatInspect(l:gpr, 'decl', l:word, expand('%'), line('.'))
@@ -253,17 +270,5 @@ function! ft#ada#GnatGotoTag()
             return
         endtry
     endtry
-    let parts = split(result[0], ':')
-    let l:file = l:parts[1]
-    let l:line = l:parts[2]
-    let l:column = l:parts[3]
-    if l:file !=# l:abs_filepath
-        call s:FindOrCreateBuffer(l:file, '', 1)
-    endif
-    call cursor(l:line, l:column)
-    if expand('<cword>') !=? l:word
-        let l:line = l:line + s:AdjustLineNumber(l:file)
-        call cursor(l:line, l:column)
-    endif
 endfunction
 
