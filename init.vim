@@ -36,7 +36,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'lervag/vimtex', { 'for': 'tex' }
     Plug 'lifepillar/pgsql.vim', { 'for': 'sql' }
     Plug 'mbbill/undotree'
