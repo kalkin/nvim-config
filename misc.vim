@@ -12,5 +12,6 @@ filetype plugin on
 let g:mapleader=' '
 
 augroup HiglightTODO
-    autocmd Syntax * call matchadd('Todo',  '\W\zs\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)')
+    autocmd Syntax * call matchadd('Todo',  '\(^\s*\|\s+\)\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)\(\s*$\|\s+\)')
 augroup END
+map <Leader>sg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
