@@ -101,3 +101,5 @@ function! ShellFold()
   return foldtextstart . repeat(foldchar, &tw - foldtextlength+1) . foldtextend
 endfunction
 "set foldtext=ShellFold()
+
+nmap <buffer> <silent> <leader><Return> :ALEFix shfmt<CR>
