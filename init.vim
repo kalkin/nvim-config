@@ -30,6 +30,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'bennyyip/vim-yapf', { 'for': 'python' , 'do': 'pip3 install yapf --user --upgrade'}
     Plug 'brandonbloom/vim-factor', { 'for': 'factor' }
     Plug 'chrisbra/NrrwRgn'
+    Plug 'cespare/vim-toml'
     Plug 'dahu/vim-lotr'
     Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip3 install jedi --user --upgrade' }
     Plug 'fisadev/vim-isort', { 'for': 'python', 'do': 'pip3 install isort --user --upgrade' }
