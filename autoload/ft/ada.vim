@@ -21,7 +21,7 @@ endfunction
 
 function! s:GnatInspect(gpr, cmd, name, file, line)
     let l:needle = a:name .':' . a:file. ':' . a:line
-    let l:output = system('gnatinspect -P' . a:gpr .' -c"' . a:cmd . ' '. l:needle .'"')
+    let l:output = system(b:gnatinspect_executable . ' -P' . a:gpr .' -c"' . a:cmd . ' '. l:needle .'"')
     let l:result = s:SanitizeResult(l:output, a:name)
     if l:result == []
         throw a:name . ' not found'

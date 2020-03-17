@@ -19,6 +19,7 @@ let b:ale_linters = ['gcc']
 let b:ale_ada_gnatpp_options = '--insert-blank-lines --based-grouping=4 --par_threshold=3 --call_threshold=3 --decimal-grouping=3 --preserve-blank-lines --comments-unchanged --max-line-length=120'
 let b:ale_ada_gcc_options = '-gnatwa -gnatq -gnatX -gnatW8'
 let b:ale_ada_gcc_executable= $HOME . '/opt/GNAT/2019/bin/gcc'
+let b:gnatinspect_executable= $HOME . '/opt/GNAT/2019/bin/gnatinspect'
 let b:ale_ada_gnatpp_executable= $HOME . '/opt/GNAT/2019/bin/gnatpp'
 nmap <buffer> <silent> <leader><Return> :ALEFix gnatpp<CR>
 
