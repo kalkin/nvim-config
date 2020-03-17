@@ -3,7 +3,7 @@ function! s:FindGprIn(dir)
     if len(files) == 0 && a:dir ==# '/'
         return
     elseif len(files) == 0
-        return FindGprIn(fnamemodify(a:dir, ':h'))
+        return s:FindGprIn(fnamemodify(a:dir, ':h'))
     else
         return files[0]
     endif
