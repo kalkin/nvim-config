@@ -31,6 +31,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'brandonbloom/vim-factor', { 'for': 'factor' }
     Plug 'chrisbra/NrrwRgn'
     Plug 'cespare/vim-toml'
+    Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
     Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip3 install jedi --user --upgrade' }
     Plug 'fisadev/vim-isort', { 'for': 'python', 'do': 'pip3 install isort --user --upgrade' }
