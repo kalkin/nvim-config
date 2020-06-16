@@ -9,15 +9,17 @@
 "
 " }}}
 
-" save and reload the folds see also :help 'views-sessions
 augroup vimrc
     autocmd!
     autocmd QuickFixCmdPost [^l]* cwindow
     autocmd QuickFixCmdPost l*    lwindow
 augroup END
 
-au vimrc BufWinLeave *.* mkview
-au vimrc BufWinEnter *.* silent! loadview
+" save and reload the folds see also :help 'views-sessions
+if &diff == 0
+   au vimrc BufWinLeave *.* mkview
+   au vimrc BufWinEnter *.* silent! loadview
+endif
 
 au vimrc VimResized * wincmd = " Autoresize windows on terminal size changes
 
