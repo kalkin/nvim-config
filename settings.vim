@@ -138,7 +138,7 @@ set fcs=vert:\|,fold:\
 
 " Options initiating with [G]
 " {{{
-set guifont=Fira\ Mono\ 12
+set guifont=Fira\ Mono:12
 set guioptions-=TrL
 
 " [global] |'greprg'| Program to use for the |:grep| command.
