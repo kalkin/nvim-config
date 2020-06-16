@@ -38,6 +38,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
+    Plug 'ryanoasis/vim-devicons'
     Plug 'lervag/vimtex', { 'for': 'tex' }
     Plug 'lifepillar/pgsql.vim', { 'for': 'sql' }
     Plug 'simnalamburt/vim-mundo'

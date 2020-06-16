@@ -11,3 +11,7 @@ nmap <silent> <leader>O :Files<CR>
 nmap <silent> <leader>t :Tags<CR>
 nmap <silent> <leader>v :VimConfig <CR>
 nmap <silent> <leader>z :ZshConfig <CR>
+
+" Use vim-devicons
+let g:fzf_preview_use_dev_icons = 1
+let g:fzf_preview_dev_icon_prefix_length = 1
