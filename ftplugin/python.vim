@@ -15,10 +15,6 @@ ab <buffer> print_function from __future__ print_function<CR>
 iab <buffer> qubes_parser from qubes.tools QubesArgumentParser<CR>
 iab <buffer> _main_ def main(args=None):<CR>return 0<CR><CR>if __name__ == '__main__':
 
-
-" Key Bindings
-map <buffer> <silent> <leader>vM :tabe ~/.vim/ftplugin/python.vim<CR>
-
 map <buffer> <C-]> :call jedi#goto()<CR>
 map <buffer> <C-w>] :vsplit<CR>:call jedi#goto()<CR>
 
