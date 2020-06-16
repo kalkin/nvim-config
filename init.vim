@@ -48,6 +48,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'scrooloose/nerdcommenter'
     Plug 'tarekbecker/vim-yaml-formatter'
     Plug 'tpope/vim-eunuch'
+    Plug 'rhysd/git-messenger.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-speeddating'
