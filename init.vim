@@ -69,7 +69,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'jason0x43/vim-js-indent'
     Plug 'soli/prolog-vim'
 call plug#end()
-source $VIMDIR/fzf.vim
 source $VIMDIR/settings.vim
 source $VIMDIR/misc.vim
 source $VIMDIR/autocmd.vim
