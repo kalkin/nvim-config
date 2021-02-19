@@ -15,4 +15,4 @@ nmap <silent> <leader>z :ZshConfig <CR>
 " Use vim-devicons
 let g:fzf_preview_use_dev_icons = 1
 let g:fzf_preview_dev_icon_prefix_length = 1
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'border' : 'round' } }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'border' : 'rounded' } }
