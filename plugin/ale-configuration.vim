@@ -18,6 +18,6 @@ augroup SafeSpecFiles
         \ let b:ale_linters = {'spec': ['rpmlint']}
     autocmd BufRead ~/Projects/**/*.spec " Allow my specfiles
         \ let b:ale_linters = {'spec': ['rpmlint']}
-    autocmd BufNew *.spec let b:ale_linters = {'specs': ['rpmlint]}
+    autocmd BufNew *.spec let b:ale_linters = {'spec': ['rpmlint']}
 augroup END
 
