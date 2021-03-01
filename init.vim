@@ -34,6 +34,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
     Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip3 install jedi --user --upgrade' }
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     Plug 'fisadev/vim-isort', { 'for': 'python', 'do': 'pip3 install isort --user --upgrade' }
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
