@@ -41,3 +41,6 @@ let g:LanguageClient_serverCommands = {
 setlocal foldlevel=1
 setlocal textwidth=120
 setlocal foldignore=--
+
+highlight adaInc gui=bold ctermfg=9 guifg=#cb4b16
+highlight adaStorageClass gui=bold ctermfg=2 guifg=#719e07
