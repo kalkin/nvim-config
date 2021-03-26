@@ -31,3 +31,9 @@ endfunction
 
 " Toggle color scheme
 map <Leader>sg :call g:ToggleColorScheme()<CR>
+
+" Show highlighting group at point
+nmap <silent> <Leader>ss :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name")
+            \ . '> trans<' . synIDattr(synID(line("."),col("."),0),"name")
+            \ . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
+            \ . ">"<CR>
