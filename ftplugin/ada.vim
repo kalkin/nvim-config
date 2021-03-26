@@ -44,3 +44,7 @@ setlocal foldignore=--
 
 highlight adaInc gui=bold ctermfg=9 guifg=#cb4b16
 highlight adaStorageClass gui=bold ctermfg=2 guifg=#719e07
+
+augroup AnyFold
+   autocmd Filetype ada AnyFoldActivate
+augroup End

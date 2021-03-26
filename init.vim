@@ -47,6 +47,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
     Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
+    Plug 'pseewald/vim-anyfold', { 'for': 'ada' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'tarekbecker/vim-yaml-formatter'
     Plug 'tpope/vim-eunuch'
