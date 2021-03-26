@@ -15,15 +15,27 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDAltDelims_ada = 1
 
 let b:ale_enabled = 1
-let b:ale_linters = ['gcc']
-let b:ale_ada_gnatpp_options = '--insert-blank-lines --based-grouping=4 --par_threshold=3 --call_threshold=3 --decimal-grouping=3 --preserve-blank-lines --comments-unchanged --max-line-length=120'
-let b:ale_ada_gcc_options = '-gnatwa -gnatq -gnatX -gnatW8'
-let b:ale_ada_gcc_executable= $HOME . '/opt/GNAT/2019/bin/gcc'
-let b:gnatinspect_executable= $HOME . '/opt/GNAT/2019/bin/gnatinspect'
-let b:ale_ada_gnatpp_executable= $HOME . '/opt/GNAT/2019/bin/gnatpp'
+let b:ale_linters = []
+let b:ale_ada_gcc_executable= $HOME . '/opt/GNAT/2020/bin/gcc'
+let b:gnatinspect_executable= $HOME . '/opt/GNAT/2020/bin/gnatinspect'
 nmap <buffer> <silent> <leader><Return> :ALEFix gnatpp<CR>
 
-map <buffer> <silent> <C-]> :call ft#ada#GnatGotoTag()<CR>
-map <buffer> <silent> gd :call ft#ada#GnatGotoDeclaration()<CR>
+function! s:FindGprIn(dir)
+    let files = split(globpath(a:dir, '*.gpr'))
+    if len(files) == 0 && a:dir ==# '/'
+        return
+    elseif len(files) == 0
+        return s:FindGprIn(fnamemodify(a:dir, ':h'))
+    else
+        return files[0]
+    endif
+endfunction
+
+let b:abs_filepath = fnamemodify(expand('%'), ':p')
+let b:ale_ada_gnatpp_options = '-P ' . s:FindGprIn(fnamemodify(b:abs_filepath, ':h'))
+
+let g:LanguageClient_serverCommands = {
+    \ 'ada': [$HOME . '/bin/adals'],
+    \ }
 
 set textwidth=120
