@@ -70,6 +70,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'zah/nim.vim', { 'branch': 'master', 'for': 'nim' }
     Plug 'jason0x43/vim-js-indent'
     Plug 'soli/prolog-vim'
+    Plug 'zaid/vim-rec'
 call plug#end()
 source $VIMDIR/settings.vim
 source $VIMDIR/misc.vim
