@@ -1,9 +1,16 @@
 syntax on
+
+" Figure out the current terminal background
 if split(system('colorscheme || echo 3'), '\n')[0] ==# '0'
     set background=light
 else
-    set background=dark
+    if !empty($BACKGROUND)
+        let &background = $BACKGROUND
+    else
+        set background=dark
+    endif
 endif
+
 set termguicolors  " Terminal uses 24-bit colors.
 set colorcolumn=+1 " Mark max textwidth with a colored column
 set cursorline     " Highlight the screen line of the cursor
