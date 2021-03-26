@@ -38,4 +38,6 @@ let g:LanguageClient_serverCommands = {
     \ 'ada': [$HOME . '/bin/adals'],
     \ }
 
-set textwidth=120
+setlocal foldlevel=1
+setlocal textwidth=120
+setlocal foldignore=--
