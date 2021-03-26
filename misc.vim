@@ -14,6 +14,5 @@ let g:mapleader=' '
 augroup HiglightTODO
     autocmd Syntax * call matchadd('Todo',  '\(^\s*\|\s+\)\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)\(\s*$\|\s+\)')
 augroup END
-map <Leader>sg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 let g:git_messenger_always_into_popup=1

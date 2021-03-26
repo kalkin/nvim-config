@@ -9,3 +9,6 @@ set colorcolumn=+1 " Mark max textwidth with a colored column
 set cursorline     " Highlight the screen line of the cursor
 set hlsearch       " Highlight the search results
 colorscheme NeoSolarized
+
+" Toggle color scheme
+map <Leader>sg :call g:ToggleColorScheme()<CR>
