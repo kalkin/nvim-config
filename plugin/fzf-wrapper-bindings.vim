@@ -3,11 +3,11 @@ command! -bang ZshConfig call fzf#run(fzf#wrap({'source': "ag --ignore-dir bundl
 command! -bang FilesWithoutIgnored call fzf#run(fzf#wrap({'source': "ag -l "}))
 
 nmap <silent> <leader>b :Buffers<CR>
-nmap <silent> <leader>f :GFiles<CR>
+nmap <silent> <leader>f :Files<CR>
 nmap <silent> <leader>g :Ag
 nmap <silent> <leader>h :Helptags<CR>
-nmap <silent> <leader>o :FilesWithoutIgnored<CR>
-nmap <silent> <leader>O :Files<CR>
+nmap <silent> <leader>o :execute 'GFiles' '--' getcwd()<CR>
+nmap <silent> <leader>O :FilesWithoutIgnored<CR>
 nmap <silent> <leader>t :Tags<CR>
 nmap <silent> <leader>v :VimConfig <CR>
 nmap <silent> <leader>z :ZshConfig <CR>
