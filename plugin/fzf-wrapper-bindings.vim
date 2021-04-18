@@ -4,7 +4,7 @@ command! -bang FilesWithoutIgnored call fzf#run(fzf#wrap({'source': "ag -l "}))
 
 nmap <silent> <leader>b :Buffers<CR>
 nmap <silent> <leader>f :Files<CR>
-nmap <silent> <leader>g :Ag
+nmap <silent> <leader>g :Ag!<CR>
 nmap <silent> <leader>h :Helptags<CR>
 nmap <silent> <leader>o :execute 'GFiles' '--' getcwd()<CR>
 nmap <silent> <leader>O :FilesWithoutIgnored<CR>
