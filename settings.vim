@@ -42,7 +42,7 @@ set bs=2
 set cin 
 
 " [global] |'cmdheight'| Disable the 'Press RETURN...' - Messages
-set ch=2
+set ch=1
 
 " [global] |'cmdwinheight'| Fives lines should be enough
 set cwh=5
