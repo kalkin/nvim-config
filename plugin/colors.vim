@@ -1,5 +1,3 @@
-syntax on
-
 " Figure out the current terminal background
 if split(system('colorscheme || echo 3'), '\n')[0] ==# '0'
     set background=light
