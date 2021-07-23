@@ -28,18 +28,14 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'Chiel92/vim-autoformat'
     Plug 'airblade/vim-gitgutter'
     Plug 'bennyyip/vim-yapf', { 'for': 'python' , 'do': 'pip3 install yapf --user --upgrade'}
-    Plug 'brandonbloom/vim-factor', { 'for': 'factor' }
     Plug 'chrisbra/NrrwRgn'
-    Plug 'cespare/vim-toml'
     Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
     Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip3 install jedi --user --upgrade' }
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     Plug 'fisadev/vim-isort', { 'for': 'python', 'do': 'pip3 install isort --user --upgrade' }
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
-    Plug 'ryanoasis/vim-devicons'
     Plug 'lervag/vimtex', { 'for': 'tex' }
     Plug 'lifepillar/pgsql.vim', { 'for': 'sql' }
     Plug 'simnalamburt/vim-mundo'
@@ -58,7 +54,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
     Plug 'Raku/vim-raku', { 'for': 'raku' }
-    Plug 'vim-scripts/taglist.vim'
     Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
     Plug 'autozimu/LanguageClient-neovim', {
         \ 'branch': 'next',
@@ -66,10 +61,6 @@ call plug#begin($VIMDIR.'/bundle')
         \ }
     Plug 'vito-c/jq.vim', { 'for': 'jq' }
     Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
-    Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
-    Plug 'xolox/vim-misc', { 'for': 'lua' }
-    Plug 'zah/nim.vim', { 'branch': 'master', 'for': 'nim' }
-    Plug 'jason0x43/vim-js-indent'
     Plug 'soli/prolog-vim'
     Plug 'zaid/vim-rec'
 call plug#end()
