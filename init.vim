@@ -34,12 +34,10 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'aklt/plantuml-syntax'
     Plug 'arrufat/vala.vim'
     Plug 'airblade/vim-gitgutter'
-    Plug 'bennyyip/vim-yapf', { 'for': 'python' , 'do': 'pip3 install yapf --user --upgrade'}
     Plug 'chrisbra/NrrwRgn'
     Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
     Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip3 install jedi --user --upgrade' }
-    Plug 'fisadev/vim-isort', { 'for': 'python', 'do': 'pip3 install isort --user --upgrade' }
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'

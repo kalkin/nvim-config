@@ -19,14 +19,9 @@ map <buffer> <C-]> :call jedi#goto()<CR>
 map <buffer> <C-w>] :vsplit<CR>:call jedi#goto()<CR>
 
 
-nmap <buffer> <silent> <leader><Return> :Isort <CR> :Yapf<CR>
-vmap <buffer> <silent> <leader><Return>  :Yapf<CR>
-
-
-" isrot use python3
-let g:vim_isort_python_version = 'python3'
-
 " Set jedi verson
 let g:jedi#force_py_version=3
 " vim: fdm=indent tw=0
 let b:ale_linters = ['bandit', 'yapf', 'isort', 'pylint']
+
+setlocal equalprg=isort\ -\|yapf
