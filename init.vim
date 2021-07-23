@@ -21,6 +21,14 @@ else
     let $VIMDIR = $XDG_CONFIG_HOME.'/vim'
 end
 
+function! InstallTsLanguages(info)
+    if a:info.status ==# 'installed' || a:info.force
+        :TSInstall maintained
+    elseif a:info.status ==# 'updated'
+        :TSUpdate
+    endif
+endfunction
+
 
 call plug#begin($VIMDIR.'/bundle')
     Plug 'aklt/plantuml-syntax'
@@ -60,6 +68,7 @@ call plug#begin($VIMDIR.'/bundle')
         \ 'do': 'bash install.sh',
         \ }
     Plug 'vito-c/jq.vim', { 'for': 'jq' }
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': function('InstallTsLanguages')}
     Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
     Plug 'soli/prolog-vim'
     Plug 'zaid/vim-rec'
