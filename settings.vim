@@ -38,9 +38,6 @@ set bs=2
 " {{{
 
 
-" [buffer] |'cindent'|  do C program indenting
-set cin 
-
 " [global] |'cmdheight'| Disable the 'Press RETURN...' - Messages
 set ch=1
 
