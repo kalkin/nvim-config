@@ -21,3 +21,8 @@ augroup SafeSpecFiles
     autocmd BufNew *.spec let b:ale_linters = {'spec': ['rpmlint']}
 augroup END
 
+" Autoclose ale location list on closing the buffer
+augroup CloseLoclistWindowGroup " see :help g:ale_open_list
+    autocmd!
+    autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
