@@ -37,7 +37,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'chrisbra/NrrwRgn'
     Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
-    Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip3 install jedi --user --upgrade' }
+    Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip install pynvim jedi --user --upgrade' }
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
