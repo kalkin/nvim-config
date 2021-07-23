@@ -33,7 +33,6 @@ endfunction
 call plug#begin($VIMDIR.'/bundle')
     Plug 'aklt/plantuml-syntax'
     Plug 'arrufat/vala.vim'
-    Plug 'Chiel92/vim-autoformat'
     Plug 'airblade/vim-gitgutter'
     Plug 'bennyyip/vim-yapf', { 'for': 'python' , 'do': 'pip3 install yapf --user --upgrade'}
     Plug 'chrisbra/NrrwRgn'

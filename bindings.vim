@@ -21,7 +21,6 @@
 
 " Quickly edit/reload the vimrc  {{{
 nmap <silent> <leader>sv :so   $VIMDIR/init.vim<CR>
-nmap <silent> <leader><Return> :Autoformat<CR>
 " }}}
 "
 nmap \ "_
@@ -88,3 +87,5 @@ nmap g= g+
 noremap <Esc> <C-\><C-n>
 
 nnoremap <silent> <leader>u :MundoToggle<CR>
+
+nnoremap <silent> <leader><Return> mqHmwgg=G`wzt`q
