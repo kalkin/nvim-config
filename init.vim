@@ -59,11 +59,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
     Plug 'Raku/vim-raku', { 'for': 'raku' }
-    Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ }
     Plug 'vito-c/jq.vim', { 'for': 'jq' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': function('InstallTsLanguages')}
     Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
