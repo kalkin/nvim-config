@@ -32,3 +32,15 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<leader>r', "<cmd>lua require('lspsaga.rename').rename()<CR>", opts)
 
 end
+
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { "phpactor" }
+for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {
+        on_attach = on_attach,
+        flags = {
+            debounce_text_changes = 150,
+        }
+    }
+end

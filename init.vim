@@ -34,6 +34,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'aklt/plantuml-syntax'
     Plug 'arrufat/vala.vim'
     Plug 'airblade/vim-gitgutter'
+    Plug 'camilledejoye/phpactor-mappings', { 'for': 'php' }
     Plug 'chrisbra/NrrwRgn'
     Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
