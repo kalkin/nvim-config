@@ -24,8 +24,12 @@ end
 function! InstallTsLanguages(info)
     if a:info.status ==# 'installed' || a:info.force
         :TSInstall maintained
+        :call system('pip install -U jedi-language-server')
     elseif a:info.status ==# 'updated'
         :TSUpdate
+        :call system('pip install -U jedi-language-server')
+    else
+        :call system('pip uninstall -y jedi-language-server')
     endif
 endfunction
 
@@ -38,7 +42,6 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'chrisbra/NrrwRgn'
     Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
-    Plug 'davidhalter/jedi-vim', { 'for': 'python', 'do': 'pip install pynvim jedi --user --upgrade' }
     Plug 'godlygeek/tabular'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
