@@ -49,6 +49,7 @@ call plug#begin()
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
     Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
     Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
     Plug 'pseewald/vim-anyfold', { 'for': 'ada' }
     Plug 'scrooloose/nerdcommenter'
