@@ -6,20 +6,17 @@
 " This file just sources my configuration files. 
 "
 " }}}
-
-if empty($XDG_CACHE_HOME)
-  let $XDG_CACHE_HOME = $HOME.'/.cache'
+if empty($XDG_DATA_HOME)
+  let $XDG_DATA_HOME = $HOME.'/.local/share'
 endif
+
 if empty($XDG_CONFIG_HOME)
   let $XDG_CONFIG_HOME = $HOME.'/.config'
 endif
 
+let $NVIM_HOME = $XDG_CONFIG_HOME . '/nvim'
 
-if has('nvim')
-    let $VIMDIR = $XDG_CONFIG_HOME.'/nvim'
-else
-    let $VIMDIR = $XDG_CONFIG_HOME.'/vim'
-end
+set viminfo+=n$NVIM_HOME/viminfo
 
 function! InstallTsLanguages(info)
     if a:info.status ==# 'installed' || a:info.force
@@ -34,7 +31,7 @@ function! InstallTsLanguages(info)
 endfunction
 
 
-call plug#begin($VIMDIR.'/bundle')
+call plug#begin()
     Plug 'aklt/plantuml-syntax'
     Plug 'arrufat/vala.vim'
     Plug 'airblade/vim-gitgutter'
@@ -71,8 +68,9 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'soli/prolog-vim'
     Plug 'zaid/vim-rec'
 call plug#end()
-source $VIMDIR/settings.vim
-source $VIMDIR/misc.vim
-source $VIMDIR/autocmd.vim
-source $VIMDIR/abbreviation.vim
-source $VIMDIR/bindings.vim
+
+source $NVIM_HOME/settings.vim
+source $NVIM_HOME/misc.vim
+source $NVIM_HOME/autocmd.vim
+source $NVIM_HOME/abbreviation.vim
+source $NVIM_HOME/bindings.vim

@@ -15,11 +15,8 @@ VIM_FILES 	= $(wildcard *.vim) \
 		  $(wildcard syntax/*.vim) \
 		  $(wildcard syntax/*.lua)
 
-TARGETS 	= $(addprefix $(TARGET_DIR)/,$(VIM_FILES)) $(HOME)/.vimrc
+TARGETS 	= $(addprefix $(TARGET_DIR)/,$(VIM_FILES))
 
-
-$(HOME)/.vimrc: vimrc
-	install $< $@
 
 $(TARGET_DIR)/%.vim: %.vim
 	install -Dt $(@D) $^
