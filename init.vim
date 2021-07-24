@@ -16,7 +16,7 @@ endif
 
 let $NVIM_HOME = $XDG_CONFIG_HOME . '/nvim'
 
-set viminfo+=n$NVIM_HOME/viminfo
+set viminfo+=n$XDG_DATA_HOME/nvim/viminfo
 
 function! InstallTsLanguages(info)
     if a:info.status ==# 'installed' || a:info.force
