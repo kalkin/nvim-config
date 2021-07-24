@@ -47,6 +47,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'rickhowe/diffchar.vim'
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
+    Plug 'neovim/nvim-lspconfig'
     Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
     Plug 'pseewald/vim-anyfold', { 'for': 'ada' }
     Plug 'scrooloose/nerdcommenter'
@@ -61,6 +62,7 @@ call plug#begin($VIMDIR.'/bundle')
     Plug 'Raku/vim-raku', { 'for': 'raku' }
     Plug 'vito-c/jq.vim', { 'for': 'jq' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': function('InstallTsLanguages')}
+    Plug 'glepnir/lspsaga.nvim' " UI around LSP
     Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
     Plug 'soli/prolog-vim'
     Plug 'zaid/vim-rec'
