@@ -4,6 +4,7 @@ let g:ale_open_list = 1
 let g:ale_pattern_options = {
 \   '.*/.local/lib.*/.*': {'ale_enabled': 0},
 \   '/usr/.*': {'ale_enabled': 0},
+\   'vendor/.*': {'ale_enabled': 0},
 \}
 
 let g:ale_completion_enabled = 1
