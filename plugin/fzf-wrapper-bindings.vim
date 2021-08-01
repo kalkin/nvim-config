@@ -1,4 +1,4 @@
-command! -bang VimConfig call fzf#run(fzf#wrap({'source': "ag --ignore-dir bundle '' -l ~/.config/nvim/"}))
+command! -bang VimConfig call fzf#run(fzf#wrap({'source': "ag --ignore-dir plugged '' -l ~/.config/nvim/"}))
 command! -bang ZshConfig call fzf#run(fzf#wrap({'source': "ag --ignore-dir bundle '' -l ~/.config/zsh/"}))
 command! -bang FilesWithoutIgnored call fzf#run(fzf#wrap({'source': "ag -l "}))
 
