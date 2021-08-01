@@ -8,3 +8,4 @@ let b:ale_php_phan_executable= b:php_project_dir . '/vendor/bin/phan'
 let b:ale_fixers = { 'php': ['phpcbf'] }
 let g:ale_completion_enabled
 
+set textwidth=120
