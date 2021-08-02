@@ -7,7 +7,11 @@ let s:vendor_phan_client = b:php_project_dir . '/vendor/bin/phan_client'
 
 if !empty(glob(s:vendor_phan_client))
     let b:ale_php_phan_executable= s:vendor_phan_client
-    let b:ale_php_phan_options = '-s .phan/socket'
+    let s:socket = '.phan/socket'
+    let b:ale_php_phan_options = '-s ' . s:socket
+    if empty(glob(s:socket))
+        call jobstart(['bash', '-c', './vendor/bin/phan -s ' . s:socket . '; rm -f ' . s:socket], {'detach': 1})
+    endif
 endif
 
 let b:ale_linters = ['phan-custom', 'phpcs', 'phpmd']
