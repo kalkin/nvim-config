@@ -20,7 +20,7 @@
 
 
 " Quickly edit/reload the vimrc  {{{
-nmap <silent> <leader>sv :so   $VIMDIR/init.vim<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " }}}
 "
 nmap \ "_
