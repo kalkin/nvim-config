@@ -68,6 +68,7 @@ call plug#begin()
     Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
     Plug 'soli/prolog-vim'
     Plug 'zaid/vim-rec'
+    Plug 'gko/vim-coloresque'
 call plug#end()
 
 source $NVIM_HOME/settings.vim
