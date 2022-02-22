@@ -44,9 +44,6 @@ set ch=1
 " [global] |'cmdwinheight'| Fives lines should be enough
 set cwh=5
 
-" [global] |'cp'| Vim either more Vi-compatible or make Vim really usefull
-set nocompatible        "this is vim not vi!
-
 set clipboard=unnamedplus
 
 " [global] |'completeopt'| Options for Insert mode completion
@@ -285,9 +282,6 @@ set stl=%<[%n]\ %F\ \ Filetype=\%Y\ \ %r\ %1*%m%*%w%=%(Line:\ %l%)%4(%)Column:\ 
 
 " Options initiating with [T]
 " {{{
-
-" [global] |'ttyfast'| are we using a fast terminal? Yeppa!!!!11
-set tf
 
 " [buffer] |'tabstop'| number of spaces that a <Tab> in the file counts for
 set ts=4
