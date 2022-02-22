@@ -50,7 +50,6 @@ call plug#begin()
     Plug 'mhinz/vim-grepper'
     Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
     Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
     Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
     Plug 'pseewald/vim-anyfold', { 'for': 'ada' }
     Plug 'scrooloose/nerdcommenter'
@@ -69,6 +68,10 @@ call plug#begin()
     Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
     Plug 'soli/prolog-vim'
     Plug 'zaid/vim-rec'
+
+    Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+    Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
     Plug 'gko/vim-coloresque'
 call plug#end()
 

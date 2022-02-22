@@ -1,4 +1,1 @@
-" Use completion-nvim in every buffer
-augroup auto_completion
-    autocmd BufEnter * lua require'completion'.on_attach()
-augroup END
+let g:coq_settings = { 'auto_start': 'shut-up' }
