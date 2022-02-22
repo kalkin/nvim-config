@@ -40,6 +40,7 @@ call plug#begin()
     Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
     Plug 'godlygeek/tabular'
+    Plug 'hashivim/vim-terraform'
     Plug 'icymind/NeoSolarized'
     Plug 'junegunn/fzf.vim'
     Plug 'lervag/vimtex', { 'for': 'tex' }
