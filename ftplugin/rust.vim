@@ -1,4 +1,3 @@
-setlocal omnifunc=LanguageClient#complete
 let b:ale_linters = ['cargo', 'analyzer']
 let g:ale_rust_cargo_use_clippy = 1
 
