@@ -64,7 +64,7 @@ call plug#begin()
     Plug 'Raku/vim-raku', { 'for': 'raku' }
     Plug 'vito-c/jq.vim', { 'for': 'jq' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': function('InstallTsLanguages')}
-    Plug 'glepnir/lspsaga.nvim' " UI around LSP
+    Plug 'tami5/lspsaga.nvim'  " UI around LSP
     Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
     Plug 'soli/prolog-vim'
     Plug 'zaid/vim-rec'
