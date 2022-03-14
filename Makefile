@@ -3,6 +3,10 @@ XDG_CONFIG_HOME ?= $(HOME)/.config
 TARGET_DIR 	= $(XDG_CONFIG_HOME)/nvim
 VIM_FILES 	= $(wildcard *.vim) \
 			  $(wildcard *.lua) \
+		  $(wildcard after/ftplugin/*.vim) \
+		  $(wildcard after/plugin/*.vim) \
+		  $(wildcard after/ftplugin/*.lua) \
+		  $(wildcard after/plugin/*.lua) \
 		  $(wildcard autoload/*.vim) \
 		  $(wildcard autoload/*.lua) \
 		  $(wildcard ftdetect/*.vim) \
