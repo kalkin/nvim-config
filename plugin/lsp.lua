@@ -16,10 +16,9 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<C-]>', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
     buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
     buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    buf_set_keymap('n', 'gr', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>", opts)
-
+    buf_set_keymap('n', 'gr', "<cmd>:TroubleToggle lsp_references<CR>", opts)
     buf_set_keymap('n', 'K', "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>", opts)
-    buf_set_keymap('n', '<C-k>', "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>", opts)
+    buf_set_keymap('n', '<C-q>', "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>", opts)
     buf_set_keymap('n', '<A-k>', "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>", opts)
 
     buf_set_keymap('n', '<C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opts)
