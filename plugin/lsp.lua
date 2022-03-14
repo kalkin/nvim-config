@@ -43,3 +43,5 @@ for _, lsp in ipairs(servers) do
         }
     }
 end
+
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua require'lspsaga.diagnostic'.show_line_diagnostics()]]
