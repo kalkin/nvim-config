@@ -37,7 +37,6 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
     Plug 'camilledejoye/phpactor-mappings', { 'for': 'php' }
     Plug 'chrisbra/NrrwRgn'
-    Plug 'tmhedberg/SimpylFold'
     Plug 'dahu/vim-lotr'
     Plug 'godlygeek/tabular'
     Plug 'hashivim/vim-terraform'
