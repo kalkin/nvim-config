@@ -1,6 +1,7 @@
 
-set foldmethod=marker
+set foldexpr=nvim_treesitter#foldexpr()
 set foldmarker={,}
+set foldmethod=expr
 set foldlevel=1
 set foldcolumn=0    " Hide the fold level indicator column
 

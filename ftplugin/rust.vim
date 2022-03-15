@@ -9,7 +9,4 @@ map <buffer> <C-w>] :vsplit<CR> <Plug>(lcn-definition)
 map <buffer> <Leader>r <Plug>(lcn-rename)
 map <buffer> <C-q> <Plug>(lcn-hover)
 
-setlocal foldexpr=nvim_treesitter#foldexpr()
-setlocal foldmethod=expr
-
 :nmap <buffer> <silent> <leader><Return> :ALEFix rustfmt<CR>

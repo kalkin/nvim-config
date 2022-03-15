@@ -46,6 +46,3 @@ call ale#linter#Define('php', {
 ab pubf public function
 ab pubsf public static function
 set textwidth=120
-
-setlocal foldexpr=nvim_treesitter#foldexpr()
-setlocal foldmethod=expr
