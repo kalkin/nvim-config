@@ -1,4 +1,4 @@
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
 let g:terraform_fold_sections=1
-nmap <buffer> <silent> <leader><Return> :ALEFix terraform<CR>
+setlocal formatprg=:TerraformFmt
