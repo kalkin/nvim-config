@@ -68,6 +68,9 @@ call plug#begin()
 
     Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ~/.config/kitty/'}
     Plug 'gko/vim-coloresque' "  css/less/sass/html color preview for vim
+
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'folke/trouble.nvim'
 call plug#end()
 
 source $NVIM_HOME/settings.vim
