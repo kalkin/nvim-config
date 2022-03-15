@@ -1,8 +1,11 @@
+local bkg_diagnostics = require("bkg-diagnostics")
 local bkg_lsp = require("bkg-lsp")
 local null_ls = require("null-ls")
 
 null_ls.setup({
 	sources = {
+		bkg_diagnostics.clippy,
+
 		null_ls.builtins.code_actions.eslint,
 		null_ls.builtins.code_actions.proselint,
 		null_ls.builtins.code_actions.shellcheck,
