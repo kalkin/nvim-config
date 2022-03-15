@@ -10,6 +10,9 @@ local on_attach = function(_client, bufnr)
         vim.api.nvim_buf_set_option(bufnr, ...)
     end
 
+    -- Use lsp for formatting via qq
+    buf_set_option('formatexpr', 'v:lua.vim.lsp.buf.formatting_seq_sync({}, 2000)')
+
     --Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
