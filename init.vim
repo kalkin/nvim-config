@@ -59,7 +59,6 @@ call plug#begin()
     Plug 'vito-c/jq.vim', { 'for': 'jq' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': function('InstallTsLanguages')}
     Plug 'tami5/lspsaga.nvim'  " UI around LSP
-    Plug 'w0rp/ale', { 'do': 'pip3 install vim-vint proselint yamllint --user --upgrade' }
     Plug 'soli/prolog-vim'
     Plug 'zaid/vim-rec'
 
@@ -68,6 +67,9 @@ call plug#begin()
 
     Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ~/.config/kitty/'}
     Plug 'gko/vim-coloresque' "  css/less/sass/html color preview for vim
+
+    Plug 'nvim-lua/plenary.nvim' " Library with handy lua functions for neovim
+    Plug 'jose-elias-alvarez/null-ls.nvim' " Bridge in non-lsp tools in LSP
 
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'folke/trouble.nvim'

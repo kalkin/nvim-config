@@ -19,7 +19,5 @@ map <buffer> <C-w>] :vsplit<CR>:call jedi#goto()<CR>
 
 " Set jedi verson
 let g:jedi#force_py_version=3
-" vim: fdm=indent tw=0
-let b:ale_linters = ['bandit', 'yapf', 'isort', 'pylint']
 
 setlocal equalprg=isort\ -\|yapf
