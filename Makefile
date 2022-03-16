@@ -13,6 +13,7 @@ VIM_FILES 	= $(wildcard *.vim) \
 		  $(wildcard ftdetect/*.lua) \
 		  $(wildcard ftplugin/*.vim) \
 		  $(wildcard ftplugin/*.lua) \
+		  $(wildcard lua/*.lua) \
 		  $(wildcard plugin/*.vim) \
 		  $(wildcard plugin/*.lua) \
 		  $(wildcard spell/*) \
