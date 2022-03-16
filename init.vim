@@ -49,7 +49,7 @@ call plug#begin()
     Plug 'pseewald/vim-anyfold', { 'for': 'ada' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'tarekbecker/vim-yaml-formatter'
-    Plug 'tpope/vim-eunuch'
+    Plug 'tpope/vim-eunuch' " enuch.vim: Helpers for UNIX
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-speeddating'
@@ -67,7 +67,7 @@ call plug#begin()
     Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
     Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ~/.config/kitty/'}
-    Plug 'gko/vim-coloresque'
+    Plug 'gko/vim-coloresque' "  css/less/sass/html color preview for vim
 call plug#end()
 
 source $NVIM_HOME/settings.vim
