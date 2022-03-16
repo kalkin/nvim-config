@@ -45,7 +45,6 @@ call plug#begin()
     Plug 'lifepillar/pgsql.vim', { 'for': 'sql' }
     Plug 'simnalamburt/vim-mundo'
     Plug 'rickhowe/diffchar.vim'
-    Plug 'niklasl/vim-rdf', { 'for': 'rdf' }
     Plug 'neovim/nvim-lspconfig'
     Plug 'pearofducks/ansible-vim', { 'for': 'yaml.ansible' }
     Plug 'pseewald/vim-anyfold', { 'for': 'ada' }
