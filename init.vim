@@ -34,7 +34,6 @@ endfunction
 call plug#begin()
     Plug 'aklt/plantuml-syntax'
     Plug 'airblade/vim-gitgutter'
-    Plug 'camilledejoye/phpactor-mappings', { 'for': 'php' }
     Plug 'chrisbra/NrrwRgn'
     Plug 'dahu/vim-lotr'
     Plug 'godlygeek/tabular'
