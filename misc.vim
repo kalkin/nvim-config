@@ -14,5 +14,3 @@ let g:mapleader=' '
 augroup HiglightTODO
     autocmd Syntax * call matchadd('Todo',  '\(^\s*\|\s+\)\(WORKAROUND\|CHANGED\|XXX\|FIXME\|BUG:\|HACK\)\(\s*$\|\s+\)')
 augroup END
-
-let g:git_messenger_always_into_popup=1
