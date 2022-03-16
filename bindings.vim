@@ -87,5 +87,5 @@ nmap g= g+
 noremap <Esc> <C-\><C-n>
 
 nnoremap <silent> <leader>u :MundoToggle<CR>
-nnoremap <silent> <leader><Return> mqHmwgg=G`wzt`q
+nnoremap <silent> <leader><Return> mQHmWgggqG`Wzt`Q
 vnoremap <silent> <leader><Return> gq
