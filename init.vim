@@ -18,15 +18,29 @@ let $NVIM_HOME = $XDG_CONFIG_HOME . '/nvim'
 
 set viminfo+=n$XDG_DATA_HOME/nvim/viminfo
 
+function! NullLsDependencies(info)
+    if a:info.status ==# 'installed' || a:info.force || a:info.status ==# 'updated'
+        :call system('pip install -U ansible-lint')
+        :call system('cargo install selene stylua')
+        :call system('luarocks install --local luacheck')
+        :call system('luarocks install --local lanes')
+    else
+        :call system('pip uninstall -y ansible-lint')
+        :call system('cargo uninstall selene stylua')
+        :call system('luarocks remove luacheck')
+        :call system('luarocks remove lanes')
+    endif
+endfunction
+
 function! InstallTsLanguages(info)
     if a:info.status ==# 'installed' || a:info.force
         :TSInstall maintained
-        :call system('pip install -U jedi-language-server')
+        :call system('pip install -U jedi-language-server python-lsp-server')
     elseif a:info.status ==# 'updated'
         :TSUpdate
-        :call system('pip install -U jedi-language-server')
+        :call system('pip install -U jedi-language-server python-lsp-server')
     else
-        :call system('pip uninstall -y jedi-language-server')
+        :call system('pip uninstall -y jedi-language-server python-lsp-server')
     endif
 endfunction
 
@@ -69,7 +83,7 @@ call plug#begin()
     Plug 'gko/vim-coloresque' "  css/less/sass/html color preview for vim
 
     Plug 'nvim-lua/plenary.nvim' " Library with handy lua functions for neovim
-    Plug 'jose-elias-alvarez/null-ls.nvim' " Bridge in non-lsp tools in LSP
+    Plug 'jose-elias-alvarez/null-ls.nvim' , {'do': function('NullLsDependencies')} " Bridge in non-lsp tools in LSP
 
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'folke/trouble.nvim'
