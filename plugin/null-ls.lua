@@ -6,6 +6,7 @@ local utils = require("null-ls.utils")
 null_ls.setup({
 	sources = {
 		bkg_diagnostics.clippy,
+		bkg_diagnostics.jq,
 		bkg_diagnostics.phan,
 
 		null_ls.builtins.code_actions.eslint,

@@ -88,6 +88,32 @@ local function cargo_on_output(params, done)
 	done(diagnostics)
 end
 
+local function jq_on_output(line)
+	log:trace("OUTPUT: " .. line)
+	local split = vim.split(line, ": ", { plain = true })
+	local code = split[1]
+	local rest = split[2]
+	log:warn("code: " .. vim.inspect(code))
+	log:warn("rest: " .. vim.inspect(rest))
+	local tmp = vim.split(rest, "at line ", { plain = true })
+	local message = tmp[1]
+	local location = tmp[2]
+	local row = tonumber(vim.split(location, ",")[1])
+	local col = tonumber(vim.split(location, "column ")[2])
+	log:info("[" .. code .. "]: " .. message)
+
+	local diagnostics = {
+		row = row,
+		col = col,
+		code = code,
+		source = "jq",
+		message = message,
+	}
+	log:debug(vim.inspect(diagnostics))
+	log:info(fmt("Found %d messages", vim.tbl_count(diagnostics)))
+	return diagnostics
+end
+
 local function phan_output(params)
 	log:trace("OUTPUT: " .. vim.inspect(params.output))
 
@@ -131,6 +157,19 @@ return {
 			multiple_files = true,
 			cwd = cargo_project_root,
 			on_output = cargo_on_output,
+		}),
+	},
+
+	jq = {
+		name = "jq",
+		method = null_ls.methods.DIAGNOSTICS,
+		filetypes = { "json" },
+		generator = null_ls.generator({
+			command = "jq",
+			format = "line",
+			to_stdin = true,
+			from_stderr = true,
+			on_output = jq_on_output,
 		}),
 	},
 
