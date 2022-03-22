@@ -1,7 +1,10 @@
-local saga = require 'lspsaga' -- UI wrapper around LSP
+local lspsaga = require("lspsaga") -- UI wrapper around LSP
 
 local on_attach = function(_client, bufnr)
-    saga.init_lsp_saga()
+	lspsaga.init_lsp_saga({
+		border_style = "round",
+		use_saga_diagnostic_sign = false,
+	})
 
     local function buf_set_keymap(...)
         vim.api.nvim_buf_set_keymap(bufnr, ...)
