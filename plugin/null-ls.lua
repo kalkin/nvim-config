@@ -1,6 +1,7 @@
 local bkg_diagnostics = require("bkg-diagnostics")
 local bkg_lsp = require("bkg-lsp")
 local null_ls = require("null-ls")
+local utils = require("null-ls.utils")
 
 null_ls.setup({
 	sources = {
@@ -15,8 +16,20 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.mdl,
 		null_ls.builtins.diagnostics.mypy,
 		null_ls.builtins.diagnostics.php,
-		null_ls.builtins.diagnostics.phpcs,
-		null_ls.builtins.diagnostics.phpmd,
+		null_ls.builtins.diagnostics.phpcs.with({
+			command = "./vendor/bin/phpcs",
+			condition = function(...)
+				return utils.make_conditional_utils().root_has_file("./vendor/bin/phpcs")
+			end,
+		}),
+		null_ls.builtins.diagnostics.phpmd.with({
+			command = "php",
+			args = { "vendor/phpmd/phpmd/src/bin/phpmd", "$FILENAME", "json", "phpmd.xml" },
+			condition = function(...)
+				local u = utils.make_conditional_utils()
+				return u.root_has_file("./vendor/bin/phpmd") and u.root_has_file("phpmd.xml")
+			end,
+		}),
 		null_ls.builtins.diagnostics.proselint.with({
 			extra_filetypes = { "asciidoc", "text", "rst" },
 		}),
@@ -32,7 +45,9 @@ null_ls.setup({
 		null_ls.builtins.formatting.eslint,
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.pg_format,
-		null_ls.builtins.formatting.phpcbf,
+		null_ls.builtins.formatting.phpcbf.with({
+			command = "./vendor/bin/phpcbf",
+		}),
 		null_ls.builtins.formatting.rustfmt,
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.terraform_fmt,
