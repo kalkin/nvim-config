@@ -1,9 +1,9 @@
-" Information 
+" Information
 " {{{
 " vim:foldmarker={{{,}}} tw=80 ft=vim
 " Last Modified [ 2010-09-16 ]
 "
-" This file just sources my configuration files. 
+" This file just sources my configuration files.
 "
 " }}}
 if empty($XDG_DATA_HOME)
