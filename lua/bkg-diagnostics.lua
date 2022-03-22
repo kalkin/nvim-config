@@ -2,6 +2,7 @@ local fmt = string.format
 
 local null_ls = require("null-ls")
 local log = require("null-ls.logger")
+local utils = require("null-ls.utils")
 
 local Job = require("plenary.job")
 local Path = require("plenary.path")
@@ -87,6 +88,37 @@ local function cargo_on_output(params, done)
 	done(diagnostics)
 end
 
+local function phan_output(params)
+	log:trace("OUTPUT: " .. vim.inspect(params.output))
+
+	local PHAN_LEVEL_TO_SEVERITY = {
+		[0] = vim.diagnostic.severity.INFO,
+		[5] = vim.diagnostic.severity.WARN,
+		[10] = vim.diagnostic.severity.ERROR,
+	}
+	local diagnostics = {}
+	if params.output == nil then
+		return diagnostics
+	end
+	for _, msg in pairs(params.output) do
+		local filename = Path:new(params.cwd):joinpath(msg.location.path).filename
+		local code = msg["check_name"]
+		log:info(msg.severity .. "[" .. code .. "]: " .. msg.description)
+		table.insert(diagnostics, {
+			row = msg.location.lines["begin"],
+			code = code,
+			end_row = msg.location.lines["end"],
+			message = msg.description,
+			source = "phan",
+			severity = PHAN_LEVEL_TO_SEVERITY[msg.severity] or vim.diagnostic.severity.HINT,
+			filename = filename,
+		})
+	end
+	log:debug(vim.inspect(diagnostics))
+	log:info(fmt("Found %d messages", vim.tbl_count(diagnostics)))
+	return diagnostics
+end
+
 return {
 	clippy = {
 		name = "cargo",
@@ -99,6 +131,21 @@ return {
 			multiple_files = true,
 			cwd = cargo_project_root,
 			on_output = cargo_on_output,
+		}),
+	},
+
+	phan = {
+		name = "phan",
+		method = null_ls.methods.DIAGNOSTICS,
+		filetypes = { "php" },
+		generator = null_ls.generator({
+			command = "./vendor/bin/phan",
+			args = { "--output-mode", "json", "--no-progress-bar" },
+			format = "json_raw",
+			runtime_condition = function(...)
+				return utils.make_conditional_utils().root_has_file(".phan/config.php")
+			end,
+			on_output = phan_output,
 		}),
 	},
 }
