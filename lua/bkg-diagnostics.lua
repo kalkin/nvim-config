@@ -30,6 +30,7 @@ end
 
 local function cargo_on_output(params, done)
 	local IGNORED_MESSAGES = { "compiler-artifact", "build-script-executed", "build-finished" }
+	local IGNORED_LEVELS = { "failure-note" }
 	local function parse_output(output)
 		log:trace("OUTPUT: " .. vim.inspect(output))
 		local result = {}
@@ -46,7 +47,9 @@ local function cargo_on_output(params, done)
 				local error_message = "Unexpected: “" .. decoded .. "”"
 				error(error_message)
 			elseif vim.tbl_contains(IGNORED_MESSAGES, decoded.reason) then
-				log:debug("Skipping: " .. decoded.reason)
+				log:debug("Skipping reason: " .. decoded.reason)
+			elseif vim.tbl_contains(IGNORED_LEVELS, decoded.message.level) then
+				log:debug("Skipping level: " .. decoded.message.level)
 			elseif not vim.tbl_contains(vim.tbl_keys(CARGO_LEVEL_TO_SEVERITY), decoded.message.level) then
 				error("Unexpected message level: " .. decoded.message.level)
 			elseif decoded.reason ~= "compiler-message" then
